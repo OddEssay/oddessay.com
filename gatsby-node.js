@@ -8,14 +8,14 @@ exports.createPages = ({ graphql, actions }) => {
 
   const shortUrls = [
     {
-      fromPath: "blog",
+      fromPath: "/blog",
       toPath: "https://oddessay.com",
     },
     {
-      fromPath: "twitter",
+      fromPath: "/twitter",
       toPath: "https://twitter.com/OddEssay",
     },
   ];
 
-  shortUrls.forEach(createRedirect);
+  shortUrls.forEach((url) => createRedirect(url));
 };
