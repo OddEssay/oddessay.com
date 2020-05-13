@@ -6,16 +6,25 @@
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
-  const shortUrls = [
+  return graphql(`
     {
-      fromPath: "/blog",
-      toPath: "https://oddessay.com",
-    },
-    {
-      fromPath: "/twitter",
-      toPath: "https://twitter.com/OddEssay",
-    },
-  ];
+      allStrapiShortUrls {
+        nodes {
+          toPath
+          fromPath
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      throw result.errors;
+    }
 
-  shortUrls.forEach((url) => createRedirect(url));
+    // Create blog post pages.
+    console.log(result);
+    result.data.allStrapiShortUrls.nodes.forEach((url) => {
+      console.log("creating", url);
+      createRedirect(url);
+    });
+  });
 };
