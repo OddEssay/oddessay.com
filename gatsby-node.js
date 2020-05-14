@@ -20,11 +20,9 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
 
-    // Create blog post pages.
-    console.log(result);
-    result.data.allStrapiShortUrls.nodes.forEach((url) => {
-      console.log("creating", url);
+    const createRedirectCallBack = (url) => {
       createRedirect(url);
-    });
+    };
+    result.data.allStrapiShortUrls.nodes.forEach(createRedirectCallBack);
   });
 };
