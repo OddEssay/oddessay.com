@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "pf.is",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Paul Bennett-Freeman's Short URL handler",
+  "version": "1.0.0",
+  "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
   "dependencies": {
     "gatsby": "^2.21.22",
     "gatsby-image": "^2.4.3",
@@ -41,9 +41,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/OddEssay/pf.is"
   }
 }
