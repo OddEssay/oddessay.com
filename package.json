@@ -1,46 +1,46 @@
 {
-  "name": "pf.is",
-  "private": true,
-  "description": "Paul Bennett-Freeman's Short URL handler",
-  "version": "1.0.0",
-  "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
-  "dependencies": {
-    "gatsby": "^2.21.22",
-    "gatsby-image": "^2.4.3",
-    "gatsby-plugin-manifest": "^2.4.2",
-    "gatsby-plugin-netlify": "^2.3.2",
-    "gatsby-plugin-netlify-cache": "^1.2.0",
-    "gatsby-plugin-offline": "^3.2.1",
-    "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-sharp": "^2.6.2",
-    "gatsby-source-filesystem": "^2.3.1",
-    "gatsby-source-strapi": "^0.0.12",
-    "gatsby-theme-oddessay": "https://github.com/OddEssay/gatsby-theme-oddessay.git",
-    "gatsby-transformer-sharp": "^2.5.2",
-    "git": "^0.1.5",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
-  },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OddEssay/pf.is"
-  }
+    "name": "gatsby-starter-oddessay",
+    "private": true,
+    "description": "Paul Bennett-Freeman's Latest Site",
+    "version": "1.0.0",
+    "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
+    "dependencies": {
+        "gatsby": "^2.21.22",
+        "gatsby-image": "^2.4.3",
+        "gatsby-plugin-manifest": "^2.4.2",
+        "gatsby-plugin-netlify": "^2.3.2",
+        "gatsby-plugin-netlify-cache": "^1.2.0",
+        "gatsby-plugin-offline": "^3.2.1",
+        "gatsby-plugin-react-helmet": "^3.3.1",
+        "gatsby-plugin-sharp": "^2.6.2",
+        "gatsby-source-filesystem": "^2.3.1",
+        "gatsby-source-strapi": "^0.0.12",
+        "gatsby-theme-oddessay": "https://github.com/OddEssay/gatsby-theme-oddessay.git",
+        "gatsby-transformer-sharp": "^2.5.2",
+        "git": "^0.1.5",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-helmet": "^6.0.0"
+    },
+    "devDependencies": {
+        "prettier": "2.0.5"
+    },
+    "keywords": [
+        "gatsby"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OddEssay/gatsby-theme-oddessay"
+    }
 }
