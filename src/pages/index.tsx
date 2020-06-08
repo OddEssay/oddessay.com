@@ -4,25 +4,32 @@ import * as styles from 'gatsby-theme-oddessay/src/layouts/index.css';
 
 import HeroLayout from 'gatsby-theme-oddessay/src/layouts/hero';
 import { Card } from 'gatsby-theme-oddessay/src/components/cards';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 const IndexPage = ({
   data: {
     site: { siteMetadata },
+    strapiSites: { blog_posts },
   },
 }) => {
   const sections = [];
+  console.log(blog_posts);
   return (
     <HeroLayout
       styles={styles}
       sections={sections}
       siteTitle={siteMetadata.title}
     >
-      <Card title="Source Code">
+      <Card title="Source Code:">
         <a href="https://github.com/OddEssay/gatsby-starter">
           https://github.com/OddEssay/gatsby-starter
         </a>
       </Card>
+      {blog_posts.map((post) => (
+        <Card title={`Post: #${post.id}`}>
+          <Link to={`post_${post.id}`}> Post! </Link>
+        </Card>
+      ))}
     </HeroLayout>
   );
 };
@@ -34,6 +41,12 @@ export const query = graphql`
         title
         description
         author
+      }
+    }
+    strapiSites(slug: { eq: "oddessay" }) {
+      blog_posts {
+        id
+        content
       }
     }
   }
