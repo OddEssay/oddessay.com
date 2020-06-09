@@ -1,8 +1,14 @@
 module.exports = {
     siteMetadata: {
-        title: `Paul Bennett-Freeman's Latest Site`,
+        title: `OddEssay.com`,
         description: `A site by Paul Bennett-Freeman`,
         author: `@OddEssay`,
+        sections: [
+            { title: 'About', link: '/about' },
+            { title: 'Blog', link: '/blog' },
+
+
+        ]
     },
     plugins: [
         `gatsby-plugin-react-helmet`,

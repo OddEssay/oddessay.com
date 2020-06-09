@@ -8,18 +8,15 @@ import { graphql, Link } from 'gatsby';
 
 const IndexPage = ({
   data: {
-    site: { siteMetadata },
+    site: {
+      siteMetadata: { title, sections },
+    },
     strapiSites: { blog_posts },
   },
 }) => {
-  const sections = [];
   console.log(blog_posts);
   return (
-    <HeroLayout
-      styles={styles}
-      sections={sections}
-      siteTitle={siteMetadata.title}
-    >
+    <HeroLayout styles={styles} sections={sections} siteTitle={title}>
       <Card title="Source Code:">
         <a href="https://github.com/OddEssay/gatsby-starter">
           https://github.com/OddEssay/gatsby-starter
@@ -41,6 +38,10 @@ export const query = graphql`
         title
         description
         author
+        sections {
+          link
+          title
+        }
       }
     }
     strapiSites(slug: { eq: "oddessay" }) {
