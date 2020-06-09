@@ -1,7 +1,7 @@
 {
-    "name": "gatsby-starter-oddessay",
+    "name": "oddessay.com",
     "private": true,
-    "description": "Paul Bennett-Freeman's Latest Site",
+    "description": "OddEssay.com",
     "version": "1.0.0",
     "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
     "dependencies": {

@@ -3,7 +3,7 @@ import React from 'react';
 import * as styles from 'gatsby-theme-oddessay/src/layouts/index.css';
 
 import HeroLayout from 'gatsby-theme-oddessay/src/layouts/hero';
-import { Card } from 'gatsby-theme-oddessay/src/components/cards';
+import { Card, Box } from 'gatsby-theme-oddessay/src/components/cards';
 import { graphql, Link } from 'gatsby';
 
 const IndexPage = ({
@@ -17,16 +17,18 @@ const IndexPage = ({
   console.log(blog_posts);
   return (
     <HeroLayout styles={styles} sections={sections} siteTitle={title}>
-      <Card title="Source Code:">
-        <a href="https://github.com/OddEssay/gatsby-starter">
-          https://github.com/OddEssay/gatsby-starter
-        </a>
-      </Card>
-      {blog_posts.map((post) => (
-        <Card title={`Post: #${post.id}`}>
-          <Link to={`post_${post.id}`}> Post! </Link>
+      <Box>
+        <Card title="Source Code:">
+          <a href="https://github.com/OddEssay/gatsby-starter">
+            https://github.com/OddEssay/gatsby-starter
+          </a>
         </Card>
-      ))}
+        {blog_posts.map((post) => (
+          <Card key={`post${post.id}`} title={post.title}>
+            <Link to={post.slug}>Read More...</Link>
+          </Card>
+        ))}
+      </Box>
     </HeroLayout>
   );
 };
@@ -47,7 +49,9 @@ export const query = graphql`
     strapiSites(slug: { eq: "oddessay" }) {
       blog_posts {
         id
+        title
         content
+        slug
       }
     }
   }

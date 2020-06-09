@@ -7,7 +7,7 @@ const BlogPost = ({ data }) => {
   console.log('Page Data:', data);
   return (
     <Page
-      pageTitle="Blog Post"
+      pageTitle={data.strapiBlogPosts.title}
       siteTitle={data.site.siteMetadata.title}
       sections={data.site.siteMetadata.sections}
     >
@@ -19,6 +19,7 @@ const BlogPost = ({ data }) => {
 export const query = graphql`
   query($id: Int!) {
     strapiBlogPosts(strapiId: { eq: $id }) {
+      title
       content
     }
     site {
