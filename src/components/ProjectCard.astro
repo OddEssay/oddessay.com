@@ -1,0 +1,7 @@
+---
+import { SketchCard, SketchBadge } from 'blackchalk';
+import type { CollectionEntry } from 'astro:content';
+interface Props { project: CollectionEntry<'projects'> }
+const { project: { data: project } } = Astro.props;
+---
+<article><SketchCard client:load block className="project-card"><p class="eyebrow">On the web</p><h3><a href={project.url}>{project.title}<span aria-hidden="true"> ↗</span></a></h3><ul class="tags">{project.technologies.map(technology => <li><SketchBadge client:load>{technology}</SketchBadge></li>)}</ul></SketchCard></article>

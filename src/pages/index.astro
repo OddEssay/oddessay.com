@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import RestaurantCard from '../components/RestaurantCard.astro';
+import EssayList from '../components/EssayList.astro';
+import { projectsInOrder, essaysNewestFirst } from '../lib/content';
+const projects = await projectsInOrder();
+const restaurants = (await getCollection('restaurants')).sort((a,b) => a.data.title.localeCompare(b.data.title));
+const essays = await essaysNewestFirst();
+---
+<Layout title="Paul Bennett-Freeman" description="Projects, places to eat, and essays by Paul Bennett-Freeman.">
+  <header class="intro"><p class="eyebrow">Hello, I’m Paul Bennett-Freeman</p><h1>A few things<br/>worth keeping.</h1><p class="lede">Projects, places to eat, and essays by Paul Bennett-Freeman.</p></header>
+  <section><div class="section-heading"><h2><span>01 /</span> Projects</h2><a href="/projects">All projects ↗</a></div><div class="grid">{projects.slice(0,3).map(project => <ProjectCard project={project}/>)}</div></section>
+  <section><div class="section-heading"><h2><span>02 /</span> Restaurants</h2><a href="/restaurants">All restaurants ↗</a></div><p class="section-note">A starting collection of fictional examples, with generated food illustrations.</p><div class="grid">{restaurants.slice(0,3).map(restaurant => <RestaurantCard restaurant={restaurant}/>)}</div></section>
+  <section><div class="section-heading"><h2><span>03 /</span> Essays</h2><a href="/essays">All essays ↗</a></div><EssayList essays={essays.slice(0,3)}/></section>
+</Layout>

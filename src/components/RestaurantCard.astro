@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import { SketchCard, SketchBadge } from 'blackchalk';
+import type { CollectionEntry } from 'astro:content';
+import { filterPath, tagLabels, type Filter } from '../lib/restaurants';
+interface Props { restaurant: CollectionEntry<'restaurants'>; filter?: Filter }
+const { restaurant: { data: r }, filter = {} } = Astro.props;
+---
+<article>
+  <SketchCard client:load block padding={0} className="restaurant-card">
+    <figure><Image src={r.image} alt={r.imageAlt} width={640} height={420} format="webp" loading="lazy"/><figcaption>{r.example ? 'Example · Generated illustration' : 'Restaurant image'}</figcaption></figure>
+    <div class="card-content">{r.example && <p class="eyebrow">Fictional sample restaurant</p>}<h3>{r.title}</h3>
+      <a class="location" href={filterPath({ city: r.citySlug, tag: filter.tag })}>{r.city}</a>
+      <ul class="tags">{r.tags.map(tag => <li><a href={filterPath({ city: filter.city, tag })}><SketchBadge client:load>{tagLabels[tag]}</SketchBadge></a></li>)}</ul>
+    </div>
+  </SketchCard>
+</article>

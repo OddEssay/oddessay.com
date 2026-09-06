@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EssayList from '../../components/EssayList.astro';
+import { essaysNewestFirst } from '../../lib/content';
+const essays = await essaysNewestFirst();
+---
+<Layout title="Essays" description="Essays by Paul Bennett-Freeman. Begin with a clearly labelled example essay." section="essays"><header class="intro"><p class="eyebrow">03 / Things written down</p><h1>Essays</h1><p class="lede">A little room to think out loud.</p></header><h2 class="sr-only">Newest essays</h2><EssayList essays={essays}/></Layout>

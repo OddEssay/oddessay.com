@@ -1,0 +1,13 @@
+---
+import Shell from '../components/Shell';
+import 'blackchalk/styles.css';
+import 'blackchalk/fonts.css';
+import '../styles.css';
+interface Props { title: string; description: string; section?: string }
+const { title, description, section } = Astro.props;
+---
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>{title} | OddEssay.com</title><meta name="description" content={description}/></head>
+  <body class="sketch-paper"><a class="skip-link" href="#content">Skip to content</a><Shell section={section}><slot/></Shell></body>
+</html>
