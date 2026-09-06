@@ -20,7 +20,7 @@ const { Content } = await render(restaurant);
       <a class="location" href={filterPath({ city: r.citySlug })}>{r.city}</a>
       <ul class="tags">{r.tags.map(tag => <li><a href={filterPath({ tag })}>{tagLabel(tag)}</a></li>)}</ul>
     </header>
-    <RestaurantImage restaurant={r}/>
+    <RestaurantImage restaurant={r} presentation="detail"/>
     <Content/>
   </article>
 </Layout>

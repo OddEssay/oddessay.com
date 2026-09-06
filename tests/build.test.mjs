@@ -43,7 +43,7 @@ test('rendered filter controls preserve the other selection', () => {
   assert.match(html, /<h3><a href="\/restaurants\/place\/bistro-lao">Bistro Lao<\/a><\/h3>/);
   assert.doesNotMatch(html, /<h3><a[^>]*>Hawksmoor<\/a><\/h3>/);
 });
-test('homepage and listings render real restaurants, local images, project links and empty essays', () => {
+test('homepage and listings render real restaurants, local images, project links and essays', () => {
   for (const name of ['index', 'restaurants']) {
     const html = stripScripts(page(name));
     const visible = name === 'index' ? alphabetical.slice(0, 3) : alphabetical;
@@ -65,8 +65,7 @@ test('homepage and listings render real restaurants, local images, project links
     assert.match(page(name), /Cloudflare Serverless/);
   }
   for (const name of ['index', 'essays']) {
-    assert.match(page(name), /No essays yet\./);
-    assert.doesNotMatch(page(name), /href="\/essays\/[^"]+"/);
+    assert.match(page(name), /href="\/essays\/2026-09-06-first-post"/);
   }
 });
 test('Markdown, metadata, navigation, font and hydration assets are present', () => {
@@ -79,8 +78,8 @@ test('Markdown, metadata, navigation, font and hydration assets are present', ()
     assert.match(html, /aria-label="Main navigation"/);
     for (const section of ['projects', 'restaurants', 'essays']) assert.ok(html.includes(`href="/${section}"`));
   }
-  assert.match(page('restaurants'), /component-export="SketchCard"/);
-  assert.match(page('restaurants'), /component-export="SketchBadge"/);
+  assert.match(page('restaurants'), /component-url="[^"]*SketchCard[^"]*" component-export="default"/);
+  assert.match(page('restaurants'), /component-url="[^"]*SketchBadge[^"]*" component-export="default"/);
   assert.ok(readdirSync('dist/_astro').some(file => file.endsWith('.woff2')));
 });
 
@@ -110,4 +109,26 @@ test('retired content and its unused filters have no generated routes', () => {
   for (const route of ['restaurants/place/garden-table', 'restaurants/place/little-plates', 'essays/a-place-to-keep-things', 'restaurants/london', 'restaurants/all/vegan', 'restaurants/all/vegetarian', 'restaurants/all/small-plates']) {
     assert.ok(!existsSync(`dist/${route}.html`), route);
   }
+});
+
+test('responsive photos are inert, illustrations have AVIF and WebP candidates, and Latin is preloaded', () => {
+  const html = page('index');
+  assert.match(html, /<template data-photo-template>[\s\S]*?<source[^>]*type="image\/avif"[\s\S]*?data-photo[\s\S]*?<\/template>/);
+  const live = stripScripts(html).replace(/<template\b[^>]*>[\s\S]*?<\/template>/g, '');
+  assert.doesNotMatch(live, /data-photo(?:\s|=)/);
+  assert.match(live, /type="image\/avif"/);
+  assert.match(live, /srcset="[^"]+1400w/);
+  assert.match(live, /sizes="auto,/);
+  assert.match(html, /rel="preload" href="[^\"]*caveat-latin\.[^\"]*woff2" as="font" type="font\/woff2" crossorigin="anonymous"/);
+  assert.doesNotMatch(html, /rel="preload"[^>]*latin-ext/);
+  assert.ok(!readdirSync('dist/_astro').some(file => /\.(png|jpe?g)$/.test(file)), 'Unprocessed restaurant originals must not be public assets');
+});
+
+test('hydration bundles exclude unused controls and Motion', () => {
+  const chunks = readdirSync('dist/_astro').filter(file => file.endsWith('.js'));
+  const code = chunks.map(file => readFileSync(join('dist/_astro', file), 'utf8')).join('\n');
+  assert.doesNotMatch(code, /framer-motion|motionComponentSymbol|SketchDayCell|SketchIconRadio|SketchTab/);
+  // Count shared chunks once; catches accidentally hydrating the package entry.
+  const bytes = chunks.reduce((sum, file) => sum + readFileSync(join('dist/_astro', file)).length, 0);
+  assert.ok(bytes < 250_000, `Unexpected browser JavaScript growth: ${bytes} bytes`);
 });

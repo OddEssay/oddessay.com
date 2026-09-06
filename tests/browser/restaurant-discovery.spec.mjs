@@ -38,7 +38,7 @@ Temporary content discovery test.
   await expect.poll(async () => (await request.get('/restaurants/test-city/new-authoring-tag')).status()).toBe(404);
 });
 
-test('empty essays and a temporary authored essay render without a demo field', async ({ request }) => {
+test('existing essays and a temporary authored essay render without a demo field', async ({ request }) => {
   const root = process.env.RESTAURANT_TEST_ROOT;
   if (!root) throw new Error('Run using pnpm test:browser.');
   for (const route of ['/restaurants/place/garden-table', '/restaurants/place/little-plates', '/essays/a-place-to-keep-things', '/restaurants/london']) {
@@ -61,7 +61,8 @@ test('empty essays and a temporary authored essay render without a demo field', 
     await unlink(file);
   }
   for (const route of ['/', '/essays']) {
-    await expect.poll(async () => (await request.get(route)).text()).toContain('No essays yet.');
+    await expect.poll(async () => (await request.get(route)).text()).not.toContain('href="/essays/authoring-essay-fixture"');
+    expect(await (await request.get(route)).text()).toContain('href="/essays/2026-09-06-first-post"');
   }
   await expect.poll(async () => (await request.get('/essays/authoring-essay-fixture')).status()).toBe(404);
 });

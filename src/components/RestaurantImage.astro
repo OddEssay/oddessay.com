@@ -1,18 +1,30 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture, getImage } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-interface Props { restaurant: CollectionEntry<'restaurants'>['data'] }
-const { restaurant: r } = Astro.props;
+interface Props { restaurant: CollectionEntry<'restaurants'>['data']; presentation?: 'card' | 'detail' }
+const { restaurant: r, presentation = 'card' } = Astro.props;
+// Shell sidebar is ~220px; content has 4vw padding, capped at 64px.
+const sizes = presentation === 'detail'
+  ? 'auto, (max-width: 500px) calc(100vw - 40px), (max-width: 650px) 92vw, (max-width: 1000px) calc(92vw - 220px), 700px'
+  : 'auto, (max-width: 500px) calc(100vw - 40px), (max-width: 534px) 92vw, (max-width: 650px) calc((92vw - 22px) / 2), (max-width: 774px) calc(92vw - 220px), (max-width: 1440px) calc((92vw - 242px) / 2), (max-width: 1600px) calc((1198px - 8vw) / 2), 535px';
+// Read dimensions from getImage's resolved metadata. Reading the content image
+// proxy directly would mark the full original PNG as a public build asset.
+const metadata = async (src: typeof r.image) => (await getImage({ src, width: 640, height: 420, format: 'webp' })).options.src as typeof r.image;
+const illustrationSource = await metadata(r.image);
+const photoSource = r.originalImage ? await metadata(r.originalImage) : undefined;
+// Keep width descriptors truthful when Astro caps a transform at source size.
+const imageProps = (source: typeof r.image) => ({ width: 640, height: 420, widths: [...new Set([320, 480, 640, 800, 1024, 1280, 1400, 2100].map(width => Math.min(width, source.width)))], sizes, formats: ['avif'] as ['avif'], fallbackFormat: 'webp' as const, loading: 'lazy' as const });
 ---
 <restaurant-image>
   <figure>
     <div class="restaurant-image-frame">
-      <Image data-illustration src={r.image} alt={r.imageAlt} width={640} height={420} format="webp" loading="lazy"/>
-      {r.originalImage && <Image data-photo src={r.originalImage} alt={r.originalImageAlt!} aria-hidden="true" width={640} height={420} format="webp" loading="lazy"/>}
+      <Picture data-illustration src={r.image} alt={r.imageAlt} {...imageProps(illustrationSource)}/>
+      {photoSource && <template data-photo-template><Picture data-photo src={r.originalImage!} alt={r.originalImageAlt!} aria-hidden="true" {...imageProps(photoSource)}/></template>}
     </div>
     <figcaption>
       <span data-caption>Generated illustration</span>
       {r.originalImage && <button type="button" data-toggle hidden aria-pressed="false" aria-label={`Show photo of ${r.title}`}></button>}
+      <span class="sr-only" data-status role="status" aria-live="polite"></span>
     </figcaption>
   </figure>
 </restaurant-image>

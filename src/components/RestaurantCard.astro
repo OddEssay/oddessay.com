@@ -1,6 +1,7 @@
 ---
 import RestaurantImage from './RestaurantImage.astro';
-import { SketchCard, SketchBadge } from 'blackchalk';
+import SketchCard from './SketchCard';
+import SketchBadge from './SketchBadge';
 import type { CollectionEntry } from 'astro:content';
 import { filterPath, tagLabel, type Filter } from '../lib/restaurants';
 interface Props { restaurant: CollectionEntry<'restaurants'>; filter?: Filter }

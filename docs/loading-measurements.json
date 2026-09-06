@@ -1,0 +1,3524 @@
+{
+  "before": {
+    "runs": [
+      {
+        "performance": 93,
+        "first-contentful-paint": 1811.2649999999999,
+        "largest-contentful-paint": 3086.2650000000003,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "total-byte-weight": 477078,
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 10,
+            "transferSize": 476064
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 240846
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 3,
+            "transferSize": 153065
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 1,
+            "transferSize": 74810
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 4648
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 1,
+            "transferSize": 2695
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ]
+      },
+      {
+        "performance": 96,
+        "first-contentful-paint": 1809.50985,
+        "largest-contentful-paint": 2634.50985,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "total-byte-weight": 476064,
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 10,
+            "transferSize": 476064
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 240846
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 3,
+            "transferSize": 153065
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 1,
+            "transferSize": 74810
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 4648
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 1,
+            "transferSize": 2695
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ]
+      },
+      {
+        "performance": 93,
+        "first-contentful-paint": 1806.5527499999998,
+        "largest-contentful-paint": 3006.55275,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "total-byte-weight": 476064,
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 10,
+            "transferSize": 476064
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 4,
+            "transferSize": 240846
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 3,
+            "transferSize": 153065
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 1,
+            "transferSize": 74810
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 4648
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 1,
+            "transferSize": 2695
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ]
+      }
+    ],
+    "lighthouseVersion": "13.4.1",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 4015,
+      "credits": {}
+    },
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "javascriptGraph": [
+      {
+        "file": "_astro/client.BVu97UNL.js",
+        "bytes": 180598,
+        "gzipBytes": 56482,
+        "imports": [
+          "_astro/react-dom.DIoIPu4I.js"
+        ],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "<root>/node_modules/.pnpm/scheduler@0.27.0/node_modules/scheduler/cjs/scheduler.production.js",
+            "renderedLength": 9100,
+            "renderedExports": [
+              "unstable_Profiling",
+              "unstable_runWithPriority",
+              "unstable_wrapCallback",
+              "unstable_ImmediatePriority",
+              "unstable_shouldYield",
+              "unstable_requestPaint",
+              "unstable_cancelCallback",
+              "unstable_next",
+              "unstable_getCurrentPriorityLevel",
+              "unstable_UserBlockingPriority",
+              "unstable_NormalPriority",
+              "unstable_IdlePriority",
+              "unstable_LowPriority",
+              "unstable_scheduleCallback",
+              "unstable_forceFrameRate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/scheduler@0.27.0/node_modules/scheduler/index.js",
+            "renderedLength": 224,
+            "renderedExports": [
+              "unstable_Profiling",
+              "unstable_runWithPriority",
+              "unstable_wrapCallback",
+              "unstable_ImmediatePriority",
+              "unstable_shouldYield",
+              "unstable_requestPaint",
+              "unstable_cancelCallback",
+              "unstable_next",
+              "unstable_getCurrentPriorityLevel",
+              "unstable_UserBlockingPriority",
+              "unstable_NormalPriority",
+              "unstable_IdlePriority",
+              "unstable_LowPriority",
+              "unstable_scheduleCallback",
+              "unstable_forceFrameRate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-client.production.js",
+            "renderedLength": 454954,
+            "renderedExports": [
+              "createRoot",
+              "hydrateRoot"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/client.js",
+            "renderedLength": 522,
+            "renderedExports": [
+              "createRoot",
+              "hydrateRoot"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/@astrojs+react@6.0.5_@types+react-dom@19.2.7_@types+react@19.2.18__@types+react@19.2.18_789163f2d2b437391e56bcaa47a8d4fb/node_modules/@astrojs/react/dist/static-html.js",
+            "renderedLength": 682,
+            "renderedExports": [
+              "default"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/@astrojs+react@6.0.5_@types+react-dom@19.2.7_@types+react@19.2.18__@types+react@19.2.18_789163f2d2b437391e56bcaa47a8d4fb/node_modules/@astrojs/react/dist/client.js",
+            "renderedLength": 3389,
+            "renderedExports": [
+              "default"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "_astro/index.BWzrCTAd.js",
+        "bytes": 312937,
+        "gzipBytes": 91728,
+        "imports": [
+          "_astro/react-dom.DIoIPu4I.js"
+        ],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/cjs/react-jsx-runtime.production.js",
+            "renderedLength": 903,
+            "renderedExports": [
+              "Fragment",
+              "jsxs",
+              "jsx"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/jsx-runtime.js",
+            "renderedLength": 232,
+            "renderedExports": [
+              "Fragment",
+              "jsxs",
+              "jsx"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/blackchalk@0.3.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/blackchalk/dist/chunk-PTNLVFNI.js",
+            "renderedLength": 2803,
+            "renderedExports": [
+              "defaultTheme",
+              "useThemeScope",
+              "darkTheme",
+              "applyTheme",
+              "themeToCss",
+              "SketchThemeProvider",
+              "deriveTokens"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/roughjs@4.6.6/node_modules/roughjs/bundled/rough.esm.js",
+            "renderedLength": 38362,
+            "renderedExports": [
+              "default"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs",
+            "renderedLength": 236,
+            "renderedExports": [
+              "LayoutGroupContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/use-constant.mjs",
+            "renderedLength": 312,
+            "renderedExports": [
+              "useConstant"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/is-browser.mjs",
+            "renderedLength": 213,
+            "renderedExports": [
+              "isBrowser"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs",
+            "renderedLength": 276,
+            "renderedExports": [
+              "useIsomorphicLayoutEffect"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/PresenceContext.mjs",
+            "renderedLength": 248,
+            "renderedExports": [
+              "PresenceContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/array.mjs",
+            "renderedLength": 300,
+            "renderedExports": [
+              "removeItem",
+              "addUniqueItem"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/clamp.mjs",
+            "renderedLength": 204,
+            "renderedExports": [
+              "clamp"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/errors.mjs",
+            "renderedLength": 158,
+            "renderedExports": [
+              "warning",
+              "invariant"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/global-config.mjs",
+            "renderedLength": 144,
+            "renderedExports": [
+              "MotionGlobalConfig"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/is-numerical-string.mjs",
+            "renderedLength": 192,
+            "renderedExports": [
+              "isNumericalString"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/is-object.mjs",
+            "renderedLength": 182,
+            "renderedExports": [
+              "isObject"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/is-zero-value-string.mjs",
+            "renderedLength": 176,
+            "renderedExports": [
+              "isZeroValueString"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/memo.mjs",
+            "renderedLength": 255,
+            "renderedExports": [
+              "memo"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/noop.mjs",
+            "renderedLength": 158,
+            "renderedExports": [
+              "noop"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/pipe.mjs",
+            "renderedLength": 185,
+            "renderedExports": [
+              "pipe"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/progress.mjs",
+            "renderedLength": 248,
+            "renderedExports": [
+              "progress"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/subscription-manager.mjs",
+            "renderedLength": 727,
+            "renderedExports": [
+              "SubscriptionManager"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/time-conversion.mjs",
+            "renderedLength": 293,
+            "renderedExports": [
+              "millisecondsToSeconds",
+              "secondsToMilliseconds"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/velocity-per-second.mjs",
+            "renderedLength": 255,
+            "renderedExports": [
+              "velocityPerSecond"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/cubic-bezier.mjs",
+            "renderedLength": 942,
+            "renderedExports": [
+              "cubicBezier"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/modifiers/mirror.mjs",
+            "renderedLength": 251,
+            "renderedExports": [
+              "mirrorEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/modifiers/reverse.mjs",
+            "renderedLength": 211,
+            "renderedExports": [
+              "reverseEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/back.mjs",
+            "renderedLength": 278,
+            "renderedExports": [
+              "backOut",
+              "backIn",
+              "backInOut"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/anticipate.mjs",
+            "renderedLength": 227,
+            "renderedExports": [
+              "anticipate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/circ.mjs",
+            "renderedLength": 236,
+            "renderedExports": [
+              "circInOut",
+              "circIn",
+              "circOut"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/ease.mjs",
+            "renderedLength": 281,
+            "renderedExports": [
+              "easeInOut",
+              "easeOut",
+              "easeIn"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/utils/is-easing-array.mjs",
+            "renderedLength": 252,
+            "renderedExports": [
+              "isEasingArray"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/utils/is-bezier-definition.mjs",
+            "renderedLength": 255,
+            "renderedExports": [
+              "isBezierDefinition"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-utils@12.39.0/node_modules/motion-utils/dist/es/easing/utils/map.mjs",
+            "renderedLength": 836,
+            "renderedExports": [
+              "easingDefinitionToFunction"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/frameloop/order.mjs",
+            "renderedLength": 239,
+            "renderedExports": [
+              "stepsOrder"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/frameloop/render-step.mjs",
+            "renderedLength": 1363,
+            "renderedExports": [
+              "createRenderStep"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/frameloop/batcher.mjs",
+            "renderedLength": 1920,
+            "renderedExports": [
+              "createRenderBatcher"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/frameloop/frame.mjs",
+            "renderedLength": 317,
+            "renderedExports": [
+              "cancelFrame",
+              "frame",
+              "frameData",
+              "frameSteps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/frameloop/sync-time.mjs",
+            "renderedLength": 420,
+            "renderedExports": [
+              "time"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/is-css-variable.mjs",
+            "renderedLength": 777,
+            "renderedExports": [
+              "containsCSSVariable",
+              "isCSSVariableName",
+              "isCSSVariableToken"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/numbers/index.mjs",
+            "renderedLength": 323,
+            "renderedExports": [
+              "alpha",
+              "number",
+              "scale"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/sanitize.mjs",
+            "renderedLength": 173,
+            "renderedExports": [
+              "sanitize"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/float-regex.mjs",
+            "renderedLength": 175,
+            "renderedExports": [
+              "floatRegex"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/is-nullish.mjs",
+            "renderedLength": 171,
+            "renderedExports": [
+              "isNullish"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/single-color-regex.mjs",
+            "renderedLength": 276,
+            "renderedExports": [
+              "singleColorRegex"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/color/utils.mjs",
+            "renderedLength": 626,
+            "renderedExports": [
+              "isColorString",
+              "splitColor"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/color/rgba.mjs",
+            "renderedLength": 574,
+            "renderedExports": [
+              "rgbUnit",
+              "rgba"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/color/hex.mjs",
+            "renderedLength": 699,
+            "renderedExports": [
+              "hex"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/numbers/units.mjs",
+            "renderedLength": 716,
+            "renderedExports": [
+              "degrees",
+              "vw",
+              "percent",
+              "progressPercentage",
+              "vh",
+              "px"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/color/hsla.mjs",
+            "renderedLength": 510,
+            "renderedExports": [
+              "hsla"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/color/index.mjs",
+            "renderedLength": 581,
+            "renderedExports": [
+              "color"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/color-regex.mjs",
+            "renderedLength": 262,
+            "renderedExports": [
+              "colorRegex"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/complex/index.mjs",
+            "renderedLength": 2549,
+            "renderedExports": [
+              "analyseComplexValue",
+              "complex"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/color/hsla-to-rgba.mjs",
+            "renderedLength": 919,
+            "renderedExports": [
+              "hslaToRgba"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/mix/immediate.mjs",
+            "renderedLength": 179,
+            "renderedExports": [
+              "mixImmediate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/mix/number.mjs",
+            "renderedLength": 200,
+            "renderedExports": [
+              "mixNumber"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/mix/color.mjs",
+            "renderedLength": 1204,
+            "renderedExports": [
+              "mixColor",
+              "mixLinearColor"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/mix/visibility.mjs",
+            "renderedLength": 348,
+            "renderedExports": [
+              "mixVisibility",
+              "invisibleValues"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/mix/complex.mjs",
+            "renderedLength": 2468,
+            "renderedExports": [
+              "mixObject",
+              "mixComplex",
+              "getMixer",
+              "mixArray"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/mix/index.mjs",
+            "renderedLength": 292,
+            "renderedExports": [
+              "mix"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/drivers/frame.mjs",
+            "renderedLength": 419,
+            "renderedExports": [
+              "frameloopDriver"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/utils/linear.mjs",
+            "renderedLength": 450,
+            "renderedExports": [
+              "generateLinearEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/utils/calc-duration.mjs",
+            "renderedLength": 447,
+            "renderedExports": [
+              "calcGeneratorDuration",
+              "maxGeneratorDuration"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/utils/create-generator-easing.mjs",
+            "renderedLength": 555,
+            "renderedExports": [
+              "createGeneratorEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/spring.mjs",
+            "renderedLength": 9072,
+            "renderedExports": [
+              "spring"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/utils/velocity.mjs",
+            "renderedLength": 350,
+            "renderedExports": [
+              "getGeneratorVelocity"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/inertia.mjs",
+            "renderedLength": 1967,
+            "renderedExports": [
+              "inertia"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/interpolate.mjs",
+            "renderedLength": 1558,
+            "renderedExports": [
+              "interpolate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/offsets/fill.mjs",
+            "renderedLength": 360,
+            "renderedExports": [
+              "fillOffset"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/offsets/default.mjs",
+            "renderedLength": 239,
+            "renderedExports": [
+              "defaultOffset"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/offsets/time.mjs",
+            "renderedLength": 223,
+            "renderedExports": [
+              "convertOffsetToTimes"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/keyframes.mjs",
+            "renderedLength": 1005,
+            "renderedExports": [
+              "keyframes",
+              "defaultEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/get-final.mjs",
+            "renderedLength": 529,
+            "renderedExports": [
+              "getFinalKeyframe"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/replace-transition-type.mjs",
+            "renderedLength": 375,
+            "renderedExports": [
+              "replaceTransitionType"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/WithPromise.mjs",
+            "renderedLength": 470,
+            "renderedExports": [
+              "WithPromise"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/JSAnimation.mjs",
+            "renderedLength": 7616,
+            "renderedExports": [
+              "JSAnimation"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/utils/fill-wildcards.mjs",
+            "renderedLength": 271,
+            "renderedExports": [
+              "fillWildcards"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/dom/parse-transform.mjs",
+            "renderedLength": 2283,
+            "renderedExports": [
+              "defaultTransformValue",
+              "readTransformValue",
+              "parseValueFromTransform"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/keys-transform.mjs",
+            "renderedLength": 461,
+            "renderedExports": [
+              "transformPropOrder",
+              "transformProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/utils/unit-conversion.mjs",
+            "renderedLength": 1621,
+            "renderedExports": [
+              "isNumOrPxType",
+              "removeNonTranslationalTransform",
+              "positionalValues"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/KeyframesResolver.mjs",
+            "renderedLength": 3620,
+            "renderedExports": [
+              "flushKeyframeResolvers",
+              "KeyframeResolver"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/dom/is-css-var.mjs",
+            "renderedLength": 167,
+            "renderedExports": [
+              "isCSSVar"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/dom/style-set.mjs",
+            "renderedLength": 250,
+            "renderedExports": [
+              "setStyle"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/supports/flags.mjs",
+            "renderedLength": 142,
+            "renderedExports": [
+              "supportsFlags"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/supports/memo.mjs",
+            "renderedLength": 258,
+            "renderedExports": [
+              "memoSupports"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/supports/scroll-timeline.mjs",
+            "renderedLength": 245,
+            "renderedExports": [
+              "supportsScrollTimeline"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/supports/linear-easing.mjs",
+            "renderedLength": 348,
+            "renderedExports": [
+              "supportsLinearEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/easing/cubic-bezier.mjs",
+            "renderedLength": 217,
+            "renderedExports": [
+              "cubicBezierAsString"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/easing/supported.mjs",
+            "renderedLength": 568,
+            "renderedExports": [
+              "supportedWaapiEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/easing/map-easing.mjs",
+            "renderedLength": 603,
+            "renderedExports": [
+              "mapEasingToNativeEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/start-waapi-animation.mjs",
+            "renderedLength": 845,
+            "renderedExports": [
+              "startWaapiAnimation"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/generators/utils/is-generator.mjs",
+            "renderedLength": 232,
+            "renderedExports": [
+              "isGenerator"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/utils/apply-generator.mjs",
+            "renderedLength": 401,
+            "renderedExports": [
+              "applyGeneratorOptions"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/NativeAnimation.mjs",
+            "renderedLength": 3469,
+            "renderedExports": [
+              "NativeAnimation"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/utils/unsupported-easing.mjs",
+            "renderedLength": 479,
+            "renderedExports": [
+              "replaceStringEasing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/NativeAnimationExtended.mjs",
+            "renderedLength": 1175,
+            "renderedExports": [
+              "NativeAnimationExtended"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/is-animatable.mjs",
+            "renderedLength": 406,
+            "renderedExports": [
+              "isAnimatable"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/can-animate.mjs",
+            "renderedLength": 1124,
+            "renderedExports": [
+              "canAnimate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/make-animation-instant.mjs",
+            "renderedLength": 231,
+            "renderedExports": [
+              "makeAnimationInstant"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/utils/accelerated-values.mjs",
+            "renderedLength": 261,
+            "renderedExports": [
+              "acceleratedValues"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/utils/is-browser-color.mjs",
+            "renderedLength": 420,
+            "renderedExports": [
+              "hasBrowserOnlyColors"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/waapi/supports/waapi.mjs",
+            "renderedLength": 1066,
+            "renderedExports": [
+              "supportsBrowserAnimation"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/AsyncMotionValueAnimation.mjs",
+            "renderedLength": 3721,
+            "renderedExports": [
+              "AsyncMotionValueAnimation"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/calc-child-stagger.mjs",
+            "renderedLength": 607,
+            "renderedExports": [
+              "calcChildStagger"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/index.mjs",
+            "renderedLength": 3945,
+            "renderedExports": [
+              "motionValue",
+              "MotionValue",
+              "collectMotionValues"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/resolve-transition.mjs",
+            "renderedLength": 361,
+            "renderedExports": [
+              "resolveTransition"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/get-value-transition.mjs",
+            "renderedLength": 385,
+            "renderedExports": [
+              "getValueTransition"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/default-transitions.mjs",
+            "renderedLength": 790,
+            "renderedExports": [
+              "getDefaultTransition"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/is-transition-defined.mjs",
+            "renderedLength": 466,
+            "renderedExports": [
+              "isTransitionDefined"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/interfaces/motion-value.mjs",
+            "renderedLength": 2132,
+            "renderedExports": [
+              "animateMotionValue"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/utils/css-variables-conversion.mjs",
+            "renderedLength": 1054,
+            "renderedExports": [
+              "getVariableValue",
+              "parseCSSVariable"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/resolve-variants.mjs",
+            "renderedLength": 914,
+            "renderedExports": [
+              "resolveVariantFromProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/resolve-dynamic-variants.mjs",
+            "renderedLength": 349,
+            "renderedExports": [
+              "resolveVariant"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/keys-position.mjs",
+            "renderedLength": 257,
+            "renderedExports": [
+              "positionalKeys"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/is-keyframes-target.mjs",
+            "renderedLength": 192,
+            "renderedExports": [
+              "isKeyframesTarget"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/setters.mjs",
+            "renderedLength": 715,
+            "renderedExports": [
+              "setTarget"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/utils/is-motion-value.mjs",
+            "renderedLength": 193,
+            "renderedExports": [
+              "isMotionValue"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/will-change/is.mjs",
+            "renderedLength": 214,
+            "renderedExports": [
+              "isWillChangeMotionValue"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/will-change/add-will-change.mjs",
+            "renderedLength": 522,
+            "renderedExports": [
+              "addValueToWillChange"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/dom/utils/camel-to-dash.mjs",
+            "renderedLength": 229,
+            "renderedExports": [
+              "camelToDash"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/optimized-appear/data-id.mjs",
+            "renderedLength": 259,
+            "renderedExports": [
+              "optimizedAppearDataAttribute",
+              "optimizedAppearDataId"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/optimized-appear/get-appear-id.mjs",
+            "renderedLength": 246,
+            "renderedExports": [
+              "getOptimisedAppearId"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/interfaces/visual-element-target.mjs",
+            "renderedLength": 2752,
+            "renderedExports": [
+              "animateTarget"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/interfaces/visual-element-variant.mjs",
+            "renderedLength": 1866,
+            "renderedExports": [
+              "animateVariant"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/interfaces/visual-element.mjs",
+            "renderedLength": 883,
+            "renderedExports": [
+              "animateVisualElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/auto.mjs",
+            "renderedLength": 175,
+            "renderedExports": [
+              "auto"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/test.mjs",
+            "renderedLength": 165,
+            "renderedExports": [
+              "testValueType"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/dimensions.mjs",
+            "renderedLength": 281,
+            "renderedExports": [
+              "dimensionValueTypes",
+              "findDimensionValueType"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/utils/is-none.mjs",
+            "renderedLength": 325,
+            "renderedExports": [
+              "isNone"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/complex/filter.mjs",
+            "renderedLength": 826,
+            "renderedExports": [
+              "filter"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/complex/mask.mjs",
+            "renderedLength": 360,
+            "renderedExports": [
+              "mask"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/int.mjs",
+            "renderedLength": 163,
+            "renderedExports": [
+              "int"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/maps/transform.mjs",
+            "renderedLength": 585,
+            "renderedExports": [
+              "transformValueTypes"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/maps/number.mjs",
+            "renderedLength": 1221,
+            "renderedExports": [
+              "numberValueTypes"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/maps/defaults.mjs",
+            "renderedLength": 498,
+            "renderedExports": [
+              "defaultValueTypes",
+              "getDefaultValueType"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/animatable-none.mjs",
+            "renderedLength": 447,
+            "renderedExports": [
+              "getAnimatableNone"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/utils/make-none-animatable.mjs",
+            "renderedLength": 792,
+            "renderedExports": [
+              "makeNoneKeyframesAnimatable"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/keyframes/DOMKeyframesResolver.mjs",
+            "renderedLength": 3410,
+            "renderedExports": [
+              "DOMKeyframesResolver"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/border-radius.mjs",
+            "renderedLength": 249,
+            "renderedExports": [
+              "cornerRadiusProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/resolve-elements.mjs",
+            "renderedLength": 642,
+            "renderedExports": [
+              "resolveElements"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/get-as-type.mjs",
+            "renderedLength": 245,
+            "renderedExports": [
+              "getValueAsType"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/is-html-element.mjs",
+            "renderedLength": 246,
+            "renderedExports": [
+              "isHTMLElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/frameloop/microtask.mjs",
+            "renderedLength": 232,
+            "renderedExports": [
+              "microtask"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/drag/state/is-active.mjs",
+            "renderedLength": 236,
+            "renderedExports": [
+              "isDragActive",
+              "isDragging"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/drag/state/set-active.mjs",
+            "renderedLength": 494,
+            "renderedExports": [
+              "setDragLock"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/utils/setup.mjs",
+            "renderedLength": 485,
+            "renderedExports": [
+              "setupGesture"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/hover.mjs",
+            "renderedLength": 1881,
+            "renderedExports": [
+              "hover"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/utils/is-node-or-child.mjs",
+            "renderedLength": 298,
+            "renderedExports": [
+              "isNodeOrChild"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/utils/is-primary-pointer.mjs",
+            "renderedLength": 308,
+            "renderedExports": [
+              "isPrimaryPointer"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/press/utils/is-keyboard-accessible.mjs",
+            "renderedLength": 613,
+            "renderedExports": [
+              "isElementKeyboardAccessible",
+              "isElementTextInput"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/press/utils/state.mjs",
+            "renderedLength": 172,
+            "renderedExports": [
+              "isPressing"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/press/utils/keyboard.mjs",
+            "renderedLength": 1092,
+            "renderedExports": [
+              "enableKeyboardPress"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/gestures/press/index.mjs",
+            "renderedLength": 2025,
+            "renderedExports": [
+              "press"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/is-svg-element.mjs",
+            "renderedLength": 212,
+            "renderedExports": [
+              "isSVGElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/resize/handle-element.mjs",
+            "renderedLength": 1711,
+            "renderedExports": [
+              "resizeElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/resize/handle-window.mjs",
+            "renderedLength": 866,
+            "renderedExports": [
+              "resizeWindow"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/resize/index.mjs",
+            "renderedLength": 209,
+            "renderedExports": [
+              "resize"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/stats/buffer.mjs",
+            "renderedLength": 175,
+            "renderedExports": [
+              "statsBuffer"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/is-svg-svg-element.mjs",
+            "renderedLength": 220,
+            "renderedExports": [
+              "isSVGSVGElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/types/utils/find.mjs",
+            "renderedLength": 246,
+            "renderedExports": [
+              "findValueType"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/models.mjs",
+            "renderedLength": 400,
+            "renderedExports": [
+              "createBox",
+              "createAxisDelta",
+              "createAxis",
+              "createDelta"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/store.mjs",
+            "renderedLength": 166,
+            "renderedExports": [
+              "visualElementStore"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/is-animation-controls.mjs",
+            "renderedLength": 246,
+            "renderedExports": [
+              "isAnimationControls"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/is-variant-label.mjs",
+            "renderedLength": 209,
+            "renderedExports": [
+              "isVariantLabel"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/variant-props.mjs",
+            "renderedLength": 306,
+            "renderedExports": [
+              "variantPriorityOrder",
+              "variantProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/is-controlling-variants.mjs",
+            "renderedLength": 379,
+            "renderedExports": [
+              "isControllingVariants",
+              "isVariantNode"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/motion-values.mjs",
+            "renderedLength": 986,
+            "renderedExports": [
+              "updateMotionValuesFromProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/reduced-motion/state.mjs",
+            "renderedLength": 228,
+            "renderedExports": [
+              "prefersReducedMotion",
+              "hasReducedMotionListener"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/reduced-motion/index.mjs",
+            "renderedLength": 641,
+            "renderedExports": [
+              "hasReducedMotionListener",
+              "prefersReducedMotion",
+              "initPrefersReducedMotion"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/VisualElement.mjs",
+            "renderedLength": 11058,
+            "renderedExports": [
+              "setFeatureDefinitions",
+              "VisualElement",
+              "getFeatureDefinitions"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/dom/DOMVisualElement.mjs",
+            "renderedLength": 889,
+            "renderedExports": [
+              "DOMVisualElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/Feature.mjs",
+            "renderedLength": 220,
+            "renderedExports": [
+              "Feature"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/conversion.mjs",
+            "renderedLength": 750,
+            "renderedExports": [
+              "transformBoxPoints",
+              "convertBoundingBoxToBox",
+              "convertBoxToBoundingBox"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/utils/has-transform.mjs",
+            "renderedLength": 689,
+            "renderedExports": [
+              "hasTransform",
+              "has2DTranslate",
+              "hasScale"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/delta-apply.mjs",
+            "renderedLength": 2780,
+            "renderedExports": [
+              "scalePoint",
+              "applyTreeDeltas",
+              "transformBox",
+              "translateAxis",
+              "applyAxisDelta",
+              "applyPointDelta",
+              "applyBoxDelta",
+              "transformAxis"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/utils/measure.mjs",
+            "renderedLength": 607,
+            "renderedExports": [
+              "measurePageBox",
+              "measureViewportBox"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/html/utils/build-transform.mjs",
+            "renderedLength": 1617,
+            "renderedExports": [
+              "buildTransform"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/html/utils/build-styles.mjs",
+            "renderedLength": 1132,
+            "renderedExports": [
+              "buildHTMLStyles"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/html/utils/render.mjs",
+            "renderedLength": 416,
+            "renderedExports": [
+              "renderHTML"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/styles/scale-border-radius.mjs",
+            "renderedLength": 567,
+            "renderedExports": [
+              "pixelsToPercent",
+              "correctBorderRadius"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/styles/scale-box-shadow.mjs",
+            "renderedLength": 846,
+            "renderedExports": [
+              "correctBoxShadow"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/styles/scale-correction.mjs",
+            "renderedLength": 449,
+            "renderedExports": [
+              "scaleCorrectors"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/is-forced-motion-value.mjs",
+            "renderedLength": 338,
+            "renderedExports": [
+              "isForcedMotionValue",
+              "scaleCorrectors"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/html/utils/scrape-motion-values.mjs",
+            "renderedLength": 571,
+            "renderedExports": [
+              "scrapeMotionValuesFromProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/html/HTMLVisualElement.mjs",
+            "renderedLength": 1353,
+            "renderedExports": [
+              "HTMLVisualElement",
+              "getComputedStyle"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/utils/path.mjs",
+            "renderedLength": 512,
+            "renderedExports": [
+              "buildSVGPath"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/utils/build-attrs.mjs",
+            "renderedLength": 1322,
+            "renderedExports": [
+              "buildSVGAttrs"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/utils/camel-case-attrs.mjs",
+            "renderedLength": 573,
+            "renderedExports": [
+              "camelCaseAttributes"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/utils/is-svg-tag.mjs",
+            "renderedLength": 205,
+            "renderedExports": [
+              "isSVGTag"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/utils/render.mjs",
+            "renderedLength": 385,
+            "renderedExports": [
+              "renderSVG"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/utils/scrape-motion-values.mjs",
+            "renderedLength": 567,
+            "renderedExports": [
+              "scrapeMotionValuesFromProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/svg/SVGVisualElement.mjs",
+            "renderedLength": 1166,
+            "renderedExports": [
+              "SVGVisualElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/get-variant-context.mjs",
+            "renderedLength": 735,
+            "renderedExports": [
+              "getVariantContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/shallow-compare.mjs",
+            "renderedLength": 378,
+            "renderedExports": [
+              "shallowCompare"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/render/utils/animation-state.mjs",
+            "renderedLength": 7074,
+            "renderedExports": [
+              "checkVariantsDidChange",
+              "createAnimationState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/copy.mjs",
+            "renderedLength": 542,
+            "renderedExports": [
+              "copyAxisDeltaInto",
+              "copyAxisInto",
+              "copyBoxInto"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/delta-calc.mjs",
+            "renderedLength": 1975,
+            "renderedExports": [
+              "calcRelativeAxis",
+              "calcRelativePosition",
+              "calcAxisDelta",
+              "calcLength",
+              "calcBoxDelta",
+              "calcRelativeAxisPosition",
+              "calcRelativeBox",
+              "isNear"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/delta-remove.mjs",
+            "renderedLength": 1613,
+            "renderedExports": [
+              "removeBoxTransforms",
+              "removeAxisDelta",
+              "removeAxisTransforms",
+              "removePointDelta"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/geometry/utils.mjs",
+            "renderedLength": 902,
+            "renderedExports": [
+              "boxEqualsRounded",
+              "axisEqualsRounded",
+              "aspectRatio",
+              "axisEquals",
+              "boxEquals",
+              "axisDeltaEquals",
+              "isDeltaZero"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/utils/each-axis.mjs",
+            "renderedLength": 196,
+            "renderedExports": [
+              "eachAxis"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/styles/transform.mjs",
+            "renderedLength": 1394,
+            "renderedExports": [
+              "buildProjectionTransform"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/animation/mix-values.mjs",
+            "renderedLength": 1890,
+            "renderedExports": [
+              "mixValues"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/animation/animate/single-value.mjs",
+            "renderedLength": 375,
+            "renderedExports": [
+              "animateSingleValue"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/events/add-dom-event.mjs",
+            "renderedLength": 326,
+            "renderedExports": [
+              "addDomEvent"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/utils/compare-by-depth.mjs",
+            "renderedLength": 181,
+            "renderedExports": [
+              "compareByDepth"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/utils/flat-tree.mjs",
+            "renderedLength": 511,
+            "renderedExports": [
+              "FlatTree"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/utils/delay.mjs",
+            "renderedLength": 427,
+            "renderedExports": [
+              "delay"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/value/utils/resolve-motion-value.mjs",
+            "renderedLength": 221,
+            "renderedExports": [
+              "resolveMotionValue"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/shared/stack.mjs",
+            "renderedLength": 2261,
+            "renderedExports": [
+              "NodeStack"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/node/state.mjs",
+            "renderedLength": 206,
+            "renderedExports": [
+              "globalProjectionState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs",
+            "renderedLength": 39070,
+            "renderedExports": [
+              "mixBox",
+              "propagateDirtyNodes",
+              "cleanDirtyNodes",
+              "createProjectionNode",
+              "mixAxis"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/node/DocumentProjectionNode.mjs",
+            "renderedLength": 480,
+            "renderedExports": [
+              "DocumentProjectionNode"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion-dom@12.43.0/node_modules/motion-dom/dist/es/projection/node/HTMLProjectionNode.mjs",
+            "renderedLength": 817,
+            "renderedExports": [
+              "HTMLProjectionNode",
+              "rootProjectionNode"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/MotionConfigContext.mjs",
+            "renderedLength": 312,
+            "renderedExports": [
+              "MotionConfigContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/use-composed-ref.mjs",
+            "renderedLength": 879,
+            "renderedExports": [
+              "useComposedRefs"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs",
+            "renderedLength": 2938,
+            "renderedExports": [
+              "PopChild"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs",
+            "renderedLength": 1958,
+            "renderedExports": [
+              "PresenceChild"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs",
+            "renderedLength": 751,
+            "renderedExports": [
+              "usePresence"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/components/AnimatePresence/utils.mjs",
+            "renderedLength": 430,
+            "renderedExports": [
+              "getChildKey",
+              "onlyElements"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs",
+            "renderedLength": 3315,
+            "renderedExports": [
+              "AnimatePresence"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/LazyContext.mjs",
+            "renderedLength": 237,
+            "renderedExports": [
+              "LazyContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/definitions.mjs",
+            "renderedLength": 1172,
+            "renderedExports": [
+              "getInitializedFeatureDefinitions",
+              "initFeatureDefinitions"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/load-features.mjs",
+            "renderedLength": 431,
+            "renderedExports": [
+              "loadFeatures"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/utils/valid-prop.mjs",
+            "renderedLength": 978,
+            "renderedExports": [
+              "isValidMotionProp"
+            ]
+          },
+          {
+            "id": "__vite-optional-peer-dep:@emotion/is-prop-valid:framer-motion",
+            "renderedLength": 468,
+            "renderedExports": [
+              "default"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs",
+            "renderedLength": 1018,
+            "renderedExports": [
+              "filterProps",
+              "loadExternalIsValidProp"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/MotionContext/index.mjs",
+            "renderedLength": 248,
+            "renderedExports": [
+              "MotionContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/MotionContext/utils.mjs",
+            "renderedLength": 501,
+            "renderedExports": [
+              "getCurrentTreeVariants"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/MotionContext/create.mjs",
+            "renderedLength": 567,
+            "renderedExports": [
+              "useCreateMotionContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/html/utils/create-render-state.mjs",
+            "renderedLength": 286,
+            "renderedExports": [
+              "createHtmlRenderState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/html/use-props.mjs",
+            "renderedLength": 1388,
+            "renderedExports": [
+              "copyRawValuesOnly",
+              "useHTMLProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/svg/utils/create-render-state.mjs",
+            "renderedLength": 264,
+            "renderedExports": [
+              "createSvgRenderState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/svg/use-props.mjs",
+            "renderedLength": 700,
+            "renderedExports": [
+              "useSVGProps"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/svg/lowercase-elements.mjs",
+            "renderedLength": 460,
+            "renderedExports": [
+              "lowercaseSVGElements"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/dom/utils/is-svg-component.mjs",
+            "renderedLength": 409,
+            "renderedExports": [
+              "isSVGComponent"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/dom/use-render.mjs",
+            "renderedLength": 876,
+            "renderedExports": [
+              "useRender"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs",
+            "renderedLength": 2322,
+            "renderedExports": [
+              "makeUseVisualState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/html/use-html-visual-state.mjs",
+            "renderedLength": 348,
+            "renderedExports": [
+              "useHTMLVisualState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/svg/use-svg-visual-state.mjs",
+            "renderedLength": 313,
+            "renderedExports": [
+              "useSVGVisualState"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/utils/symbol.mjs",
+            "renderedLength": 232,
+            "renderedExports": [
+              "motionComponentSymbol"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/utils/use-motion-ref.mjs",
+            "renderedLength": 1036,
+            "renderedExports": [
+              "useMotionRef"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/context/SwitchLayoutGroupContext.mjs",
+            "renderedLength": 248,
+            "renderedExports": [
+              "SwitchLayoutGroupContext"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/is-ref-object.mjs",
+            "renderedLength": 293,
+            "renderedExports": [
+              "isRefObject"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/utils/use-visual-element.mjs",
+            "renderedLength": 3900,
+            "renderedExports": [
+              "useVisualElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/index.mjs",
+            "renderedLength": 2621,
+            "renderedExports": [
+              "createMotionComponent"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/components/create-proxy.mjs",
+            "renderedLength": 893,
+            "renderedExports": [
+              "createMotionProxy"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/dom/create-visual-element.mjs",
+            "renderedLength": 413,
+            "renderedExports": [
+              "createDomVisualElement"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/animation/index.mjs",
+            "renderedLength": 858,
+            "renderedExports": [
+              "AnimationFeature"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/animation/exit.mjs",
+            "renderedLength": 1694,
+            "renderedExports": [
+              "ExitAnimationFeature"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/animations.mjs",
+            "renderedLength": 280,
+            "renderedExports": [
+              "animations"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/events/event-info.mjs",
+            "renderedLength": 375,
+            "renderedExports": [
+              "extractEventInfo",
+              "addPointerInfo"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/events/add-pointer-event.mjs",
+            "renderedLength": 312,
+            "renderedExports": [
+              "addPointerEvent"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/get-context-window.mjs",
+            "renderedLength": 277,
+            "renderedExports": [
+              "getContextWindow"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/utils/distance.mjs",
+            "renderedLength": 352,
+            "renderedExports": [
+              "distance",
+              "distance2D"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/pan/PanSession.mjs",
+            "renderedLength": 6760,
+            "renderedExports": [
+              "PanSession"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/drag/utils/constraints.mjs",
+            "renderedLength": 2713,
+            "renderedExports": [
+              "calcRelativeConstraints",
+              "resolveAxisElastic",
+              "calcViewportConstraints",
+              "defaultElastic",
+              "resolvePointElastic",
+              "calcViewportAxisConstraints",
+              "rebaseAxisConstraints",
+              "calcOrigin",
+              "applyConstraints",
+              "resolveDragElastic",
+              "calcRelativeAxisConstraints"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/drag/VisualElementDragControls.mjs",
+            "renderedLength": 13507,
+            "renderedExports": [
+              "elementDragControls",
+              "VisualElementDragControls"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/drag/index.mjs",
+            "renderedLength": 1021,
+            "renderedExports": [
+              "DragGesture"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/pan/index.mjs",
+            "renderedLength": 1330,
+            "renderedExports": [
+              "PanGesture"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs",
+            "renderedLength": 3080,
+            "renderedExports": [
+              "MeasureLayout"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/drag.mjs",
+            "renderedLength": 305,
+            "renderedExports": [
+              "drag"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/hover.mjs",
+            "renderedLength": 804,
+            "renderedExports": [
+              "HoverGesture"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/focus.mjs",
+            "renderedLength": 916,
+            "renderedExports": [
+              "FocusGesture"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/gestures/press.mjs",
+            "renderedLength": 1089,
+            "renderedExports": [
+              "PressGesture"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/viewport/observers.mjs",
+            "renderedLength": 1229,
+            "renderedExports": [
+              "observeIntersection"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/viewport/index.mjs",
+            "renderedLength": 1870,
+            "renderedExports": [
+              "InViewFeature"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/gestures.mjs",
+            "renderedLength": 340,
+            "renderedExports": [
+              "gestureAnimations"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/motion/features/layout.mjs",
+            "renderedLength": 252,
+            "renderedExports": [
+              "layout"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/components/motion/feature-bundle.mjs",
+            "renderedLength": 272,
+            "renderedExports": [
+              "featureBundle"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/framer-motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs",
+            "renderedLength": 265,
+            "renderedExports": [
+              "motion"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/motion@12.43.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/motion/dist/es/react.mjs",
+            "renderedLength": 162,
+            "renderedExports": [
+              "motion"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/blackchalk@0.3.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/blackchalk/dist/index.js",
+            "renderedLength": 247446,
+            "renderedExports": [
+              "darkTheme",
+              "SketchBarChart",
+              "SketchLineChart",
+              "SketchSidebar",
+              "SketchPriceTag",
+              "SketchBreadcrumb",
+              "ICON_NAMES",
+              "SketchEmptyState",
+              "deriveTokens",
+              "SketchFormField",
+              "SketchIconRadio",
+              "SketchCartSummary",
+              "SketchOrderStatus",
+              "SketchPieChart",
+              "SketchMetricTile",
+              "SketchCombobox",
+              "SketchIcon",
+              "SketchPaper",
+              "SketchAppShell",
+              "SketchProductCard",
+              "SketchProgress",
+              "SketchRadioGroup",
+              "SketchCardGrid",
+              "SketchThemeProvider",
+              "SketchScrollRow",
+              "SketchAvatar",
+              "SketchRating",
+              "SketchSection",
+              "SketchSelect",
+              "SketchIconRadioGroup",
+              "SketchAlert",
+              "SketchCompareTable",
+              "SketchTextarea",
+              "SketchButtonGroup",
+              "SketchShape",
+              "SketchThemeToggle",
+              "colors",
+              "useSketchToast",
+              "SketchGrid",
+              "SketchSpinner",
+              "SketchForm",
+              "applyTheme",
+              "SketchSortSelect",
+              "fills",
+              "typography",
+              "SketchDrawer",
+              "SketchDropdown",
+              "SketchDatePicker",
+              "SketchToast",
+              "SketchPageHeader",
+              "ICON_PATHS",
+              "SketchToggle",
+              "SketchTabBar",
+              "SketchModal",
+              "SketchTabs",
+              "SketchRangeSlider",
+              "SketchProductGrid",
+              "SketchList",
+              "SketchRangeInput",
+              "SketchVerticalDivider",
+              "SketchPanel",
+              "SketchSearchBar",
+              "SketchAccordion",
+              "SketchFrame",
+              "strokes",
+              "SketchButton",
+              "useFrameContainer",
+              "SketchDialog",
+              "SketchPagination",
+              "SketchCartItem",
+              "SketchCheckbox",
+              "SketchFilterBar",
+              "SketchFormRow",
+              "SketchPageLayout",
+              "SketchTable",
+              "SketchPageContainer",
+              "SketchNavBar",
+              "SketchBadge",
+              "SketchInput",
+              "SketchInventoryBadge",
+              "SketchCard",
+              "SketchSlider",
+              "SketchStackedBarChart",
+              "SketchSearchInput",
+              "FrameContainerContext",
+              "SketchSettingsLayout",
+              "SketchSparkline",
+              "SketchTab",
+              "themeToCss",
+              "SketchTooltip",
+              "defaultTheme",
+              "SketchListItem",
+              "SketchImagePlaceholder",
+              "SketchDivider",
+              "SketchSplitLayout",
+              "SketchStepper",
+              "SketchSkeleton"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "_astro/react-dom.DIoIPu4I.js",
+        "bytes": 11855,
+        "gzipBytes": 4257,
+        "imports": [],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "\u0000rolldown/runtime.js",
+            "renderedLength": 1740,
+            "renderedExports": [
+              "__getProtoOf",
+              "__toCommonJS",
+              "__getOwnPropNames",
+              "__defProp",
+              "__commonJSMin",
+              "__hasOwnProp",
+              "__toESM",
+              "__copyProps",
+              "__getOwnPropDesc",
+              "__create",
+              "__esmMin",
+              "__exportAll"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/cjs/react.production.js",
+            "renderedLength": 15210,
+            "renderedExports": [
+              "StrictMode",
+              "Activity",
+              "Children",
+              "cacheSignal",
+              "createRef",
+              "useEffect",
+              "useOptimistic",
+              "isValidElement",
+              "startTransition",
+              "Component",
+              "forwardRef",
+              "cloneElement",
+              "useState",
+              "useTransition",
+              "useReducer",
+              "version",
+              "cache",
+              "__COMPILER_RUNTIME",
+              "useDebugValue",
+              "memo",
+              "__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "unstable_useCacheRefresh",
+              "useActionState",
+              "useDeferredValue",
+              "createContext",
+              "useInsertionEffect",
+              "Fragment",
+              "useLayoutEffect",
+              "createElement",
+              "useImperativeHandle",
+              "useContext",
+              "useCallback",
+              "useMemo",
+              "PureComponent",
+              "useId",
+              "Profiler",
+              "Suspense",
+              "useEffectEvent",
+              "useSyncExternalStore",
+              "lazy",
+              "useRef",
+              "use"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/index.js",
+            "renderedLength": 208,
+            "renderedExports": [
+              "use",
+              "Activity",
+              "Children",
+              "cacheSignal",
+              "createRef",
+              "useEffect",
+              "useOptimistic",
+              "isValidElement",
+              "startTransition",
+              "Component",
+              "forwardRef",
+              "cloneElement",
+              "useState",
+              "useTransition",
+              "useReducer",
+              "version",
+              "cache",
+              "__COMPILER_RUNTIME",
+              "useDebugValue",
+              "memo",
+              "__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "unstable_useCacheRefresh",
+              "useActionState",
+              "useDeferredValue",
+              "createContext",
+              "useInsertionEffect",
+              "Fragment",
+              "useLayoutEffect",
+              "createElement",
+              "useImperativeHandle",
+              "useContext",
+              "useCallback",
+              "useMemo",
+              "PureComponent",
+              "useId",
+              "Profiler",
+              "Suspense",
+              "useEffectEvent",
+              "useSyncExternalStore",
+              "lazy",
+              "useRef",
+              "StrictMode"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom.production.js",
+            "renderedLength": 5762,
+            "renderedExports": [
+              "flushSync",
+              "__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "createPortal",
+              "preinit",
+              "preinitModule",
+              "preloadModule",
+              "preconnect",
+              "useFormState",
+              "prefetchDNS",
+              "unstable_batchedUpdates",
+              "useFormStatus",
+              "preload",
+              "requestFormReset",
+              "version"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/index.js",
+            "renderedLength": 517,
+            "renderedExports": [
+              "flushSync",
+              "__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "createPortal",
+              "preinit",
+              "preinitModule",
+              "preloadModule",
+              "preconnect",
+              "useFormState",
+              "prefetchDNS",
+              "unstable_batchedUpdates",
+              "useFormStatus",
+              "preload",
+              "requestFormReset",
+              "version"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "runs": [
+      {
+        "performance": 98,
+        "first-contentful-paint": 1208.0636250000002,
+        "largest-contentful-paint": 2256.4509000000003,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "total-byte-weight": 413766,
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 10,
+            "transferSize": 411790
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 249146
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 5,
+            "transferSize": 76467
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 1,
+            "transferSize": 75718
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 6731
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 1,
+            "transferSize": 3728
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ]
+      },
+      {
+        "performance": 98,
+        "first-contentful-paint": 1203.018,
+        "largest-contentful-paint": 2252.4143999999997,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "total-byte-weight": 411790,
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 10,
+            "transferSize": 411790
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 249146
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 5,
+            "transferSize": 76467
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 1,
+            "transferSize": 75718
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 6731
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 1,
+            "transferSize": 3728
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ]
+      },
+      {
+        "performance": 98,
+        "first-contentful-paint": 1206.453375,
+        "largest-contentful-paint": 2255.1627,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "total-byte-weight": 411790,
+        "resources": [
+          {
+            "resourceType": "total",
+            "label": "Total",
+            "requestCount": 10,
+            "transferSize": 411790
+          },
+          {
+            "resourceType": "image",
+            "label": "Image",
+            "requestCount": 2,
+            "transferSize": 249146
+          },
+          {
+            "resourceType": "script",
+            "label": "Script",
+            "requestCount": 5,
+            "transferSize": 76467
+          },
+          {
+            "resourceType": "font",
+            "label": "Font",
+            "requestCount": 1,
+            "transferSize": 75718
+          },
+          {
+            "resourceType": "document",
+            "label": "Document",
+            "requestCount": 1,
+            "transferSize": 6731
+          },
+          {
+            "resourceType": "stylesheet",
+            "label": "Stylesheet",
+            "requestCount": 1,
+            "transferSize": 3728
+          },
+          {
+            "resourceType": "media",
+            "label": "Media",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "other",
+            "label": "Other",
+            "requestCount": 0,
+            "transferSize": 0
+          },
+          {
+            "resourceType": "third-party",
+            "label": "Third-party",
+            "requestCount": 0,
+            "transferSize": 0
+          }
+        ]
+      }
+    ],
+    "lighthouseVersion": "13.4.1",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 3964,
+      "credits": {}
+    },
+    "settings": {
+      "output": "json",
+      "maxWaitForFcp": 30000,
+      "maxWaitForLoad": 45000,
+      "pauseAfterFcpMs": 1000,
+      "pauseAfterLoadMs": 1000,
+      "networkQuietThresholdMs": 1000,
+      "cpuQuietThresholdMs": 1000,
+      "formFactor": "mobile",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "throttlingMethod": "simulate",
+      "screenEmulation": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3,
+        "disabled": false
+      },
+      "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "auditMode": false,
+      "gatherMode": false,
+      "clearStorageTypes": [
+        "file_systems",
+        "shader_cache",
+        "service_workers",
+        "cache_storage"
+      ],
+      "disableStorageReset": false,
+      "debugNavigation": false,
+      "channel": "node",
+      "usePassiveGathering": false,
+      "disableFullPageScreenshot": false,
+      "skipAboutBlank": false,
+      "blankPage": "about:blank",
+      "ignoreStatusCode": false,
+      "locale": "en-US",
+      "blockedUrlPatterns": null,
+      "additionalTraceCategories": null,
+      "extraHeaders": null,
+      "precomputedLanternData": null,
+      "onlyAudits": null,
+      "onlyCategories": [
+        "performance"
+      ],
+      "skipAudits": null
+    },
+    "javascriptGraph": [
+      {
+        "file": "_astro/SketchBadge.DTTgXBb3.js",
+        "bytes": 112,
+        "gzipBytes": 120,
+        "imports": [
+          "_astro/dist.BRVIOIej.js"
+        ],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "<root>/src/components/SketchBadge.tsx",
+            "renderedLength": 216,
+            "renderedExports": [
+              "default"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "_astro/SketchCard.DwNJtu30.js",
+        "bytes": 117,
+        "gzipBytes": 124,
+        "imports": [
+          "_astro/dist.BRVIOIej.js"
+        ],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "<root>/src/components/SketchCard.tsx",
+            "renderedLength": 213,
+            "renderedExports": [
+              "default"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "_astro/client.BApSHwD7.js",
+        "bytes": 180598,
+        "gzipBytes": 56480,
+        "imports": [
+          "_astro/react-dom.xFBohArb.js"
+        ],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "<root>/node_modules/.pnpm/scheduler@0.27.0/node_modules/scheduler/cjs/scheduler.production.js",
+            "renderedLength": 9100,
+            "renderedExports": [
+              "unstable_Profiling",
+              "unstable_runWithPriority",
+              "unstable_wrapCallback",
+              "unstable_ImmediatePriority",
+              "unstable_shouldYield",
+              "unstable_requestPaint",
+              "unstable_cancelCallback",
+              "unstable_next",
+              "unstable_getCurrentPriorityLevel",
+              "unstable_UserBlockingPriority",
+              "unstable_NormalPriority",
+              "unstable_IdlePriority",
+              "unstable_LowPriority",
+              "unstable_scheduleCallback",
+              "unstable_forceFrameRate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/scheduler@0.27.0/node_modules/scheduler/index.js",
+            "renderedLength": 224,
+            "renderedExports": [
+              "unstable_Profiling",
+              "unstable_runWithPriority",
+              "unstable_wrapCallback",
+              "unstable_ImmediatePriority",
+              "unstable_shouldYield",
+              "unstable_requestPaint",
+              "unstable_cancelCallback",
+              "unstable_next",
+              "unstable_getCurrentPriorityLevel",
+              "unstable_UserBlockingPriority",
+              "unstable_NormalPriority",
+              "unstable_IdlePriority",
+              "unstable_LowPriority",
+              "unstable_scheduleCallback",
+              "unstable_forceFrameRate"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-client.production.js",
+            "renderedLength": 454954,
+            "renderedExports": [
+              "createRoot",
+              "hydrateRoot"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/client.js",
+            "renderedLength": 522,
+            "renderedExports": [
+              "createRoot",
+              "hydrateRoot"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/@astrojs+react@6.0.5_@types+react-dom@19.2.7_@types+react@19.2.18__@types+react@19.2.18_789163f2d2b437391e56bcaa47a8d4fb/node_modules/@astrojs/react/dist/static-html.js",
+            "renderedLength": 682,
+            "renderedExports": [
+              "default"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/@astrojs+react@6.0.5_@types+react-dom@19.2.7_@types+react@19.2.18__@types+react@19.2.18_789163f2d2b437391e56bcaa47a8d4fb/node_modules/@astrojs/react/dist/client.js",
+            "renderedLength": 3389,
+            "renderedExports": [
+              "default"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "_astro/dist.BRVIOIej.js",
+        "bytes": 30534,
+        "gzipBytes": 10082,
+        "imports": [
+          "_astro/react-dom.xFBohArb.js"
+        ],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/cjs/react-jsx-runtime.production.js",
+            "renderedLength": 805,
+            "renderedExports": [
+              "jsxs",
+              "jsx"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/jsx-runtime.js",
+            "renderedLength": 232,
+            "renderedExports": [
+              "jsxs",
+              "jsx"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/roughjs@4.6.6/node_modules/roughjs/bundled/rough.esm.js",
+            "renderedLength": 38414,
+            "renderedExports": [
+              "default"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/blackchalk@0.3.0_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/blackchalk/dist/index.js",
+            "renderedLength": 5102,
+            "renderedExports": [
+              "colors",
+              "fills",
+              "typography",
+              "strokes",
+              "SketchBadge",
+              "SketchCard"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "_astro/react-dom.xFBohArb.js",
+        "bytes": 11543,
+        "gzipBytes": 4130,
+        "imports": [],
+        "dynamicImports": [],
+        "modules": [
+          {
+            "id": "\u0000rolldown/runtime.js",
+            "renderedLength": 1162,
+            "renderedExports": [
+              "__getProtoOf",
+              "__getOwnPropNames",
+              "__defProp",
+              "__commonJSMin",
+              "__hasOwnProp",
+              "__toESM",
+              "__copyProps",
+              "__getOwnPropDesc",
+              "__create"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/cjs/react.production.js",
+            "renderedLength": 15210,
+            "renderedExports": [
+              "StrictMode",
+              "Activity",
+              "Children",
+              "cacheSignal",
+              "createRef",
+              "useEffect",
+              "useOptimistic",
+              "isValidElement",
+              "startTransition",
+              "Component",
+              "forwardRef",
+              "cloneElement",
+              "useState",
+              "useTransition",
+              "useReducer",
+              "version",
+              "cache",
+              "__COMPILER_RUNTIME",
+              "useDebugValue",
+              "memo",
+              "__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "unstable_useCacheRefresh",
+              "useActionState",
+              "useDeferredValue",
+              "createContext",
+              "useInsertionEffect",
+              "Fragment",
+              "useLayoutEffect",
+              "createElement",
+              "useImperativeHandle",
+              "useContext",
+              "useCallback",
+              "useMemo",
+              "PureComponent",
+              "useId",
+              "Profiler",
+              "Suspense",
+              "useEffectEvent",
+              "useSyncExternalStore",
+              "lazy",
+              "useRef",
+              "use"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react@19.2.8/node_modules/react/index.js",
+            "renderedLength": 208,
+            "renderedExports": [
+              "use",
+              "Activity",
+              "Children",
+              "cacheSignal",
+              "createRef",
+              "useEffect",
+              "useOptimistic",
+              "isValidElement",
+              "startTransition",
+              "Component",
+              "forwardRef",
+              "cloneElement",
+              "useState",
+              "useTransition",
+              "useReducer",
+              "version",
+              "cache",
+              "__COMPILER_RUNTIME",
+              "useDebugValue",
+              "memo",
+              "__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "unstable_useCacheRefresh",
+              "useActionState",
+              "useDeferredValue",
+              "createContext",
+              "useInsertionEffect",
+              "Fragment",
+              "useLayoutEffect",
+              "createElement",
+              "useImperativeHandle",
+              "useContext",
+              "useCallback",
+              "useMemo",
+              "PureComponent",
+              "useId",
+              "Profiler",
+              "Suspense",
+              "useEffectEvent",
+              "useSyncExternalStore",
+              "lazy",
+              "useRef",
+              "StrictMode"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom.production.js",
+            "renderedLength": 5762,
+            "renderedExports": [
+              "flushSync",
+              "__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "createPortal",
+              "preinit",
+              "preinitModule",
+              "preloadModule",
+              "preconnect",
+              "useFormState",
+              "prefetchDNS",
+              "unstable_batchedUpdates",
+              "useFormStatus",
+              "preload",
+              "requestFormReset",
+              "version"
+            ]
+          },
+          {
+            "id": "<root>/node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/index.js",
+            "renderedLength": 517,
+            "renderedExports": [
+              "flushSync",
+              "__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE",
+              "createPortal",
+              "preinit",
+              "preinitModule",
+              "preloadModule",
+              "preconnect",
+              "useFormState",
+              "prefetchDNS",
+              "unstable_batchedUpdates",
+              "useFormStatus",
+              "preload",
+              "requestFormReset",
+              "version"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fontBefore": [
+    {
+      "width": 390,
+      "failure": false,
+      "cls": 0.23357697552083337
+    },
+    {
+      "width": 390,
+      "failure": true,
+      "cls": 0
+    },
+    {
+      "width": 1440,
+      "failure": false,
+      "cls": 0.03354288144712095
+    },
+    {
+      "width": 1440,
+      "failure": true,
+      "cls": 0
+    }
+  ],
+  "fontAfter": [
+    {
+      "width": 390,
+      "failure": false,
+      "cls": 0.00002835264423076923
+    },
+    {
+      "width": 390,
+      "failure": true,
+      "cls": 0
+    },
+    {
+      "width": 1440,
+      "failure": false,
+      "cls": 0.00016101496190200617
+    },
+    {
+      "width": 1440,
+      "failure": true,
+      "cls": 0
+    }
+  ],
+  "responsiveImages": [
+    {
+      "viewportWidth": 390,
+      "dpr": 1,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_shRLR.avif",
+      "width": 350,
+      "naturalWidth": 349,
+      "complete": true,
+      "encodedWidth": 480,
+      "encodedHeight": 315
+    },
+    {
+      "viewportWidth": 390,
+      "dpr": 1,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_shRLR.avif",
+      "width": 350,
+      "naturalWidth": 349,
+      "complete": true,
+      "encodedWidth": 480,
+      "encodedHeight": 315
+    },
+    {
+      "viewportWidth": 390,
+      "dpr": 2,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_Z1lkBGW.avif",
+      "width": 350,
+      "naturalWidth": 349,
+      "complete": true,
+      "encodedWidth": 800,
+      "encodedHeight": 525
+    },
+    {
+      "viewportWidth": 390,
+      "dpr": 2,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_Z1lkBGW.avif",
+      "width": 350,
+      "naturalWidth": 349,
+      "complete": true,
+      "encodedWidth": 800,
+      "encodedHeight": 525
+    },
+    {
+      "viewportWidth": 390,
+      "dpr": 3,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1HXx0O.avif",
+      "width": 350,
+      "naturalWidth": 350,
+      "complete": true,
+      "encodedWidth": 1280,
+      "encodedHeight": 840
+    },
+    {
+      "viewportWidth": 390,
+      "dpr": 3,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1HXx0O.avif",
+      "width": 350,
+      "naturalWidth": 350,
+      "complete": true,
+      "encodedWidth": 1280,
+      "encodedHeight": 840
+    },
+    {
+      "viewportWidth": 650,
+      "dpr": 1,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1ON3Y6.avif",
+      "width": 288,
+      "naturalWidth": 288,
+      "complete": true,
+      "encodedWidth": 320,
+      "encodedHeight": 210
+    },
+    {
+      "viewportWidth": 650,
+      "dpr": 1,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_ZGfaeW.avif",
+      "width": 598,
+      "naturalWidth": 598,
+      "complete": true,
+      "encodedWidth": 640,
+      "encodedHeight": 420
+    },
+    {
+      "viewportWidth": 650,
+      "dpr": 2,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_ZGfaeW.avif",
+      "width": 288,
+      "naturalWidth": 288,
+      "complete": true,
+      "encodedWidth": 640,
+      "encodedHeight": 420
+    },
+    {
+      "viewportWidth": 650,
+      "dpr": 2,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1HXx0O.avif",
+      "width": 598,
+      "naturalWidth": 598,
+      "complete": true,
+      "encodedWidth": 1280,
+      "encodedHeight": 840
+    },
+    {
+      "viewportWidth": 650,
+      "dpr": 3,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_Z1KQqzN.avif",
+      "width": 288,
+      "naturalWidth": 288,
+      "complete": true,
+      "encodedWidth": 1024,
+      "encodedHeight": 672
+    },
+    {
+      "viewportWidth": 650,
+      "dpr": 3,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_PxmwM.avif",
+      "width": 598,
+      "naturalWidth": 598,
+      "complete": true,
+      "encodedWidth": 1672,
+      "encodedHeight": 941
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 1,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1ON3Y6.avif",
+      "width": 292.8125,
+      "naturalWidth": 293,
+      "complete": true,
+      "encodedWidth": 320,
+      "encodedHeight": 210
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 1,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_ZGfaeW.avif",
+      "width": 607.640625,
+      "naturalWidth": 608,
+      "complete": true,
+      "encodedWidth": 640,
+      "encodedHeight": 420
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 2,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_ZGfaeW.avif",
+      "width": 292.8125,
+      "naturalWidth": 293,
+      "complete": true,
+      "encodedWidth": 640,
+      "encodedHeight": 420
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 2,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1HXx0O.avif",
+      "width": 607.640625,
+      "naturalWidth": 608,
+      "complete": true,
+      "encodedWidth": 1280,
+      "encodedHeight": 840
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 3,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_Z1KQqzN.avif",
+      "width": 292.8125,
+      "naturalWidth": 293,
+      "complete": true,
+      "encodedWidth": 1024,
+      "encodedHeight": 672
+    },
+    {
+      "viewportWidth": 900,
+      "dpr": 3,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_PxmwM.avif",
+      "width": 607.640625,
+      "naturalWidth": 608,
+      "complete": true,
+      "encodedWidth": 1672,
+      "encodedHeight": 941
+    },
+    {
+      "viewportWidth": 1440,
+      "dpr": 1,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_ZGfaeW.avif",
+      "width": 540.953125,
+      "naturalWidth": 541,
+      "complete": true,
+      "encodedWidth": 640,
+      "encodedHeight": 420
+    },
+    {
+      "viewportWidth": 1440,
+      "dpr": 1,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_Z1lkBGW.avif",
+      "width": 700,
+      "naturalWidth": 699,
+      "complete": true,
+      "encodedWidth": 800,
+      "encodedHeight": 525
+    },
+    {
+      "viewportWidth": 1440,
+      "dpr": 2,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_1HXx0O.avif",
+      "width": 540.953125,
+      "naturalWidth": 541,
+      "complete": true,
+      "encodedWidth": 1280,
+      "encodedHeight": 840
+    },
+    {
+      "viewportWidth": 1440,
+      "dpr": 2,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_2lh2CJ.avif",
+      "width": 700,
+      "naturalWidth": 700,
+      "complete": true,
+      "encodedWidth": 1400,
+      "encodedHeight": 919
+    },
+    {
+      "viewportWidth": 1440,
+      "dpr": 3,
+      "path": "/",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_PxmwM.avif",
+      "width": 540.953125,
+      "naturalWidth": 541,
+      "complete": true,
+      "encodedWidth": 1672,
+      "encodedHeight": 941
+    },
+    {
+      "viewportWidth": 1440,
+      "dpr": 3,
+      "path": "/restaurants/place/bistro-lao",
+      "currentSrc": "/_astro/cover-v1.DS1ZaAj9_PxmwM.avif",
+      "width": 700,
+      "naturalWidth": 700,
+      "complete": true,
+      "encodedWidth": 1672,
+      "encodedHeight": 941
+    }
+  ]
+}

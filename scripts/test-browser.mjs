@@ -12,6 +12,8 @@ const root = await realpath(await mkdtemp(join(tmpdir(), 'oddessay-browser-')));
 try {
   await cp(join(project, 'src'), join(root, 'src'), { recursive: true });
   for (const file of ['package.json', 'astro.config.mjs', 'tsconfig.json']) await copyFile(join(project, file), join(root, file));
+  await mkdir(join(root, 'scripts'), { recursive: true });
+  for (const name of ['security-headers.mjs', 'blackchalk-treeshake.mjs']) await copyFile(join(project, 'scripts', name), join(root, 'scripts', name));
   await symlink(join(project, 'node_modules'), join(root, 'node_modules'), 'dir');
   await cp(join(project, 'tests/fixtures'), join(root, 'tests/fixtures'), { recursive: true });
   await mkdir(join(root, 'src/pages/test-fixture'), { recursive: true });

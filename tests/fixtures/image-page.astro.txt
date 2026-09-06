@@ -11,6 +11,6 @@ const restaurant = { id: 'fixture', collection: 'restaurants' as const, data: { 
   <h1>Image interaction fixture</h1>
   <p>Geometric test assets, not restaurant photos.</p>
   <div class="grid"><RestaurantCard restaurant={restaurant}/><RestaurantCard restaurant={{ ...restaurant, id: 'fixture-two' }}/></div>
-  <article class="prose"><h2>Full-page image</h2><RestaurantImage restaurant={restaurant.data}/></article>
+  <article class="prose"><h2>Full-page image</h2><RestaurantImage restaurant={restaurant.data} presentation="detail"/></article>
   <h2>Illustration only</h2><RestaurantImage restaurant={{ ...restaurant.data, originalImage: undefined, originalImageAlt: undefined }}/>
 </Layout>

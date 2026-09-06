@@ -79,7 +79,7 @@ test('without JavaScript the illustration, caption and content remain usable', a
   await page.goto(`${baseURL}/test-fixture/image`);
   const first = page.locator('restaurant-image').first();
   await expect(first.locator('button')).toBeHidden();
-  await expect(first.locator('[data-photo]')).toHaveCSS('opacity', '0');
+  await expect(first.locator('[data-photo]')).toHaveCount(0);
   await expect(first.getByRole('img')).toHaveCount(1);
   await expect(first.locator('[data-caption]')).toHaveText('Generated illustration');
   await expect(page.getByRole('link', { name: 'Paired image fixture', exact: true }).first()).toHaveAttribute('href', '/restaurants/place/fixture');

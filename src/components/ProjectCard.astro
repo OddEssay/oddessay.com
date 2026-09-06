@@ -1,5 +1,6 @@
 ---
-import { SketchCard, SketchBadge } from 'blackchalk';
+import SketchCard from './SketchCard';
+import SketchBadge from './SketchBadge';
 import type { CollectionEntry } from 'astro:content';
 interface Props { project: CollectionEntry<'projects'> }
 const { project: { data: project } } = Astro.props;
