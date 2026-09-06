@@ -1,8 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
 import { filterPath, parseFilter, filterRoutes, matchingRestaurants, tags, tagLabels, locations } from '../src/lib/restaurants.ts';
-const restaurants = JSON.parse(readFileSync(new URL('../src/data/restaurants.json', import.meta.url)));
+// Fixed fixtures keep filter logic tests independent of editorial changes.
+const restaurants = [
+  { title: 'Garden Table', city: 'London', citySlug: 'london', tags: ['vegan', 'vegetarian'] },
+  { title: 'Little Plates', city: 'London', citySlug: 'london', tags: ['vegetarian', 'small-plates', 'wine'] },
+  { title: 'Pepper Yard', city: 'Bristol', citySlug: 'bristol', tags: ['spicy', 'beer'] },
+];
 const cities = locations(restaurants).map(c => c.slug);
 const titles = filter => matchingRestaurants(restaurants, filter).map(r => r.title);
 

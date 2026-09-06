@@ -2,19 +2,27 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { filterRoutes } from '../src/lib/restaurants.ts';
+import { filterRoutes, locations, tags } from '../src/lib/restaurants.ts';
+const restaurants = JSON.parse(readFileSync(new URL('../src/data/restaurants.json', import.meta.url)));
+const cities = locations(restaurants);
 const page = path => readFileSync(new URL(`../dist/${path}.html`, import.meta.url), 'utf8');
 const stripScripts = html => html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '').replace(/<astro-island\b[^>]*>/g, '');
 
 test('every supported filter has a generated page, including empty combinations', () => {
-  for (const route of filterRoutes(['london', 'bristol'])) {
+  for (const route of filterRoutes(cities.map(city => city.slug))) {
     const html = page(`restaurants${route ? `/${route}` : ''}`);
     assert.match(html, /Filter by location/);
     assert.match(html, /Filter by tag/);
     assert.match(html, /href="\/restaurants" aria-current="page"/);
   }
-  assert.match(page('restaurants/bristol/vegan'), /No restaurants match these filters/);
-  assert.match(page('restaurants/bristol/vegan'), /href="\/restaurants">Reset filters/);
+  for (const city of cities) {
+    for (const tag of tags) {
+      if (restaurants.some(r => r.citySlug === city.slug && r.tags.includes(tag))) continue;
+      const html = page(`restaurants/${city.slug}/${tag}`);
+      assert.match(html, /No restaurants match these filters/);
+      assert.match(html, /href="\/restaurants">Reset filters/);
+    }
+  }
   for (const route of ['paris', 'all', 'london/fish', 'london/vegan/extra']) {
     assert.ok(!existsSync(`dist/restaurants/${route}.html`));
   }
@@ -24,7 +32,7 @@ test('rendered filter controls preserve the other selection', () => {
   const html = page('restaurants/london/vegan');
   for (const link of [
     'href="/restaurants/all/vegan">All locations',
-    'href="/restaurants/bristol/vegan">Bristol',
+    ...cities.filter(city => city.slug !== 'london').map(city => `href="/restaurants/${city.slug}/vegan">${city.name}`),
     'href="/restaurants/london">All tags',
     'href="/restaurants/london/small-plates">Small Plates',
     'href="/restaurants/london/vegan" aria-current="page">Vegan',

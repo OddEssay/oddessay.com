@@ -13,7 +13,22 @@ pnpm verify
 pnpm preview
 ```
 
-`pnpm verify` runs Astro’s type/content checks, builds `dist/`, then runs the filter and built-output tests. `pnpm test` needs an existing build. Astro prints the local preview URL; `pnpm exec astro preview stop` stops the preview server. No hosting or domain configuration is included.
+`pnpm verify` runs Astro’s type/content checks, builds `dist/`, then runs the filter and built-output tests. `pnpm test` needs an existing build. Astro prints the local preview URL; `pnpm exec astro preview stop` stops the preview server.
+
+## Cloudflare Workers deployment
+
+`wrangler.jsonc` configures the existing `oddessay-com` Worker to serve static files from `dist`. No Worker script or Astro Cloudflare adapter is needed. Explicit configuration prevents Wrangler from attempting automatic Astro adapter setup during deployment. Wrangler is pinned in the pnpm lockfile.
+
+For the Cloudflare Workers Git build, use:
+
+- Build command: `pnpm run build`
+- Deploy command: `pnpm exec wrangler deploy`
+
+The existing `npx wrangler deploy` command also uses the installed version, but the pnpm command keeps package-manager usage consistent. Locally, `pnpm deploy` builds and deploys; it requires Cloudflare authentication. `pnpm deploy:check` builds and validates deployment with `--dry-run`, without publishing. After building, `pnpm preview:cloudflare` serves the site locally using Cloudflare’s asset routing.
+
+Asset routing removes trailing slashes and serves `404.html` with a 404 status for unknown paths. Domain routes and account settings remain managed outside this repository. See [Cloudflare’s static site configuration](https://developers.cloudflare.com/workers/static-assets/routing/static-site-generation/).
+
+With `pnpm preview:cloudflare` running, `node scripts/smoke-cloudflare.mjs` checks all generated restaurant routes, custom 404 responses, and canonical URL redirects against the local Cloudflare runtime.
 
 ## Content
 
@@ -36,7 +51,7 @@ Supported tags: `vegan`, `vegetarian`, `spicy`, `small-plates`, `beer`, `wine`. 
 
 Changing one filter preserves the other. Every known city/tag pair is built, including empty combinations. `all` is reserved for cross-location tag routes; `/restaurants/all` is not a separate listing. Unknown locations, unknown tags and extra segments have no route and return 404 in Astro preview.
 
-Links have no trailing slashes. Build output uses `.html` files; a future static host must resolve extensionless URLs to these files and return `404.html` with a 404 status for missing routes. Do not configure an SPA fallback.
+Links have no trailing slashes. Build output uses `.html` files; the Cloudflare asset configuration resolves extensionless URLs to these files and returns `404.html` with a 404 status for missing routes. Do not configure an SPA fallback.
 
 ## UI and assets
 
