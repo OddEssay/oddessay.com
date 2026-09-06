@@ -8,9 +8,10 @@ interface Props { restaurant: CollectionEntry<'restaurants'>; filter?: Filter }
 const { restaurant: { data: r, id }, filter = {} } = Astro.props;
 ---
 <article>
-  <SketchCard client:load block padding={0} className="restaurant-card">
-    <RestaurantImage restaurant={r}/>
+  <SketchCard client:load block padding={8} className="restaurant-card">
+    <RestaurantImage restaurant={r} href={`/restaurants/place/${id}`}/>
     <div class="card-content"><h3><a href={`/restaurants/place/${id}`}>{r.title}</a></h3>
+      <a class="restaurant-url" href={r.url}>{r.url}</a>
       <p>{r.summary}</p>
       <a class="location" href={filterPath({ city: r.citySlug, tag: filter.tag })}>{r.city}</a>
       <ul class="tags">{r.tags.map(tag => <li><a href={filterPath({ city: filter.city, tag })}><SketchBadge client:load>{tagLabel(tag)}</SketchBadge></a></li>)}</ul>

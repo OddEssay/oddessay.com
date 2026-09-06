@@ -1,8 +1,9 @@
 ---
 import { Picture, getImage } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-interface Props { restaurant: CollectionEntry<'restaurants'>['data']; presentation?: 'card' | 'detail' }
-const { restaurant: r, presentation = 'card' } = Astro.props;
+interface Props { restaurant: CollectionEntry<'restaurants'>['data']; presentation?: 'card' | 'detail'; href?: string }
+const { restaurant: r, presentation = 'card', href } = Astro.props;
+const Frame = href ? 'a' : 'div';
 // Shell sidebar is ~220px; content has 4vw padding, capped at 64px.
 const sizes = presentation === 'detail'
   ? 'auto, (max-width: 500px) calc(100vw - 40px), (max-width: 650px) 92vw, (max-width: 1000px) calc(92vw - 220px), 700px'
@@ -17,10 +18,10 @@ const imageProps = (source: typeof r.image) => ({ width: 640, height: 420, width
 ---
 <restaurant-image>
   <figure>
-    <div class="restaurant-image-frame">
+    <Frame class="restaurant-image-frame" href={href} aria-label={href ? `Read about ${r.title}` : undefined}>
       <Picture data-illustration src={r.image} alt={r.imageAlt} {...imageProps(illustrationSource)}/>
       {photoSource && <template data-photo-template><Picture data-photo src={r.originalImage!} alt={r.originalImageAlt!} aria-hidden="true" {...imageProps(photoSource)}/></template>}
-    </div>
+    </Frame>
     <figcaption>
       <span data-caption>Generated illustration</span>
       {r.originalImage && <button type="button" data-toggle hidden aria-pressed="false" aria-label={`Show photo of ${r.title}`}></button>}

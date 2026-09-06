@@ -25,13 +25,13 @@ test('toggle persists, components stay independent, and only the visible image i
   await expect(images.nth(3).getByRole('img')).toHaveCount(1);
 });
 
-test('hover is temporary and touch does not create sticky hover', async ({ page, isMobile }) => {
+test('hover is temporary and tapping a cover opens the article', async ({ page, isMobile }) => {
   const first = page.locator('restaurant-image').first();
   const frame = first.locator('.restaurant-image-frame');
   await expect(first.getByRole('button')).toBeVisible();
   if (isMobile) {
     await frame.tap();
-    await expect(first).toHaveAttribute('data-photo-visible', 'false');
+    await expect(page).toHaveURL(/\/restaurants\/place\/fixture$/);
   } else {
     await frame.hover();
     await expect(first).toHaveAttribute('data-photo-visible', 'true');

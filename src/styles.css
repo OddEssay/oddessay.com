@@ -33,7 +33,7 @@ section { margin: 48px 0; }
 .restaurant-card, .project-card { height: 100%; }
 restaurant-image { display: block; }
 restaurant-image figure { margin: 0; }
-.restaurant-image-frame { position: relative; aspect-ratio: 640/420; overflow: hidden; }
+.restaurant-image-frame { display: block; position: relative; aspect-ratio: 640/420; overflow: hidden; }
 .restaurant-image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .restaurant-image-frame [data-photo] { position: absolute; inset: 0; opacity: 0; transition: opacity 180ms ease; }
 restaurant-image[data-photo-visible="true"] [data-photo] { opacity: 1; }
@@ -43,6 +43,8 @@ restaurant-image [data-toggle]:hover { text-decoration-thickness: 2px; }
 restaurant-image button[hidden] { display: none; }
 @media (prefers-reduced-motion: reduce) { .restaurant-image-frame [data-photo] { transition: none; } }
 .card-content { padding: 20px; }
+.restaurant-card h3, .restaurant-detail h1 { margin-bottom: .75rem; }
+.restaurant-url { display: block; width: fit-content; max-width: 100%; margin-bottom: 1rem; font-size: .75rem; overflow-wrap: anywhere; }
 .card-content .eyebrow { font-size: .6rem; }
 .location { font-size: .82rem; }
 .tags { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 9px; }

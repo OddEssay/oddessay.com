@@ -16,13 +16,13 @@ test('new restaurant tags come from Markdown without registering them in code', 
   assert.equal(schema.safeParse({ ...valid, tags: ['cocktails', 'sunday-roast'] }).success, true);
 });
 test('required fields, tags, reserved cities and local image pairs are enforced', () => {
-  for (const field of ['title', 'summary', 'image', 'imageAlt', 'city', 'citySlug', 'tags']) {
+  for (const field of ['title', 'url', 'summary', 'image', 'imageAlt', 'city', 'citySlug', 'tags']) {
     const input = { ...valid };
     delete input[field];
     assert.equal(schema.safeParse(input).success, false, field);
   }
   for (const change of [
-    { summary: ' ' }, { tags: ['Sunday Dinner'] }, { tags: [''] }, { tags: [] }, { tags: ['vegan', 'vegan'] },
+    { url: 'not-a-url' }, { url: 'javascript:alert(1)' }, { summary: ' ' }, { tags: ['Sunday Dinner'] }, { tags: [''] }, { tags: [] }, { tags: ['vegan', 'vegan'] },
     { citySlug: 'all' }, { citySlug: 'place' }, { citySlug: 'London' },
     { image: './missing.png' }, { image: 'https://example.com/image.png' }, { image: '/image.png' },
     { originalImage: valid.image, originalImageAlt: undefined }, { originalImage: undefined, originalImageAlt: 'Photo' },

@@ -20,7 +20,7 @@ const projects = defineCollection({
   schema: z.object({ id: slug, title: text, url: z.url().refine(url => /^https?:\/\//.test(url)), technologies: z.array(text).min(1) }),
 });
 const restaurants = defineCollection({
-  // Entries and their tags are authored in Markdown; no registry needs updating.
+  // Entries, website URLs and tags are authored in Markdown; no registry needs updating.
   loader: glob({
     pattern: '*.md', base: './src/content/restaurants',
     generateId: ({ entry }) => slug.parse(entry.replace(/\.md$/, '')),

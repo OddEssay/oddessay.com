@@ -12,6 +12,7 @@ test('Markdown additions, edits and removal update restaurants and new tag route
   const file = join(root, 'src/content/restaurants', `${slug}.md`);
   const source = (summary) => `---
 title: Authoring discovery fixture
+url: https://example.com/
 summary: ${summary}
 image: ../../assets/restaurants/garden-table.png
 imageAlt: Fictional illustration used to test content discovery

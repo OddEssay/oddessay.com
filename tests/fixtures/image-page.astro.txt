@@ -4,7 +4,7 @@ import RestaurantCard from '../../components/RestaurantCard.astro';
 import RestaurantImage from '../../components/RestaurantImage.astro';
 import image from '../../../tests/fixtures/cover.png';
 import originalImage from '../../../tests/fixtures/photo.png';
-const data = { title: 'Paired image fixture', summary: 'Geometric test assets, not a restaurant or photograph.', image, originalImage, imageAlt: 'Monochrome circle and square', originalImageAlt: 'Colour circle and square', city: 'London', citySlug: 'london', tags: ['vegan'] as const };
+const data = { url: 'https://example.com/', title: 'Paired image fixture', summary: 'Geometric test assets, not a restaurant or photograph.', image, originalImage, imageAlt: 'Monochrome circle and square', originalImageAlt: 'Colour circle and square', city: 'London', citySlug: 'london', tags: ['vegan'] as const };
 const restaurant = { id: 'fixture', collection: 'restaurants' as const, data: { ...data, tags: [...data.tags] } };
 ---
 <Layout title="Image interaction fixture" description="Temporary browser test page" section="restaurants">

@@ -12,6 +12,7 @@ export function restaurantSchema<T extends z.ZodType>(image: T) {
   }, image);
   return z.object({
     title: text, summary: text, image: localImage, imageAlt: text,
+    url: z.string().trim().pipe(z.url({ protocol: /^https?$/ })),
     originalImage: localImage.optional(), originalImageAlt: text.optional(),
     city: text,
     citySlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
