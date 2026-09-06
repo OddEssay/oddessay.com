@@ -2,24 +2,26 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import RestaurantCard from '../../components/RestaurantCard.astro';
-import { locations, filterRoutes, parseFilter, filterPath, matchingRestaurants, tags, tagLabels } from '../../lib/restaurants';
+import { locations, filterRoutes, parseFilter, filterPath, matchingRestaurants, restaurantTags, tagLabel } from '../../lib/restaurants';
 export async function getStaticPaths() {
-  const cities = locations((await getCollection('restaurants')).map(r => r.data));
-  return filterRoutes(cities.map(c => c.slug)).map(filter => ({ params: { filter } }));
+  const data = (await getCollection('restaurants')).map(r => r.data);
+  const cities = locations(data);
+  return filterRoutes(cities.map(c => c.slug), restaurantTags(data)).map(filter => ({ params: { filter } }));
 }
 const restaurants = await getCollection('restaurants');
 const cities = locations(restaurants.map(r => r.data));
-const filter = parseFilter(Astro.params.filter, cities.map(c => c.slug));
+const tags = restaurantTags(restaurants.map(r => r.data));
+const filter = parseFilter(Astro.params.filter, cities.map(c => c.slug), tags);
 if (!filter) throw new Error('Invalid generated filter route');
 const matchingIds = new Set(matchingRestaurants(restaurants.map(r => ({ ...r.data, id: r.id })), filter).map(r => r.id));
 const results = restaurants.filter(r => matchingIds.has(r.id)).sort((a,b) => a.data.title.localeCompare(b.data.title));
 const cityName = cities.find(c => c.slug === filter.city)?.name;
-const title = [filter.tag && tagLabels[filter.tag], 'Restaurants', cityName && `in ${cityName}`].filter(Boolean).join(' ');
+const title = [filter.tag && tagLabel(filter.tag), 'Restaurants', cityName && `in ${cityName}`].filter(Boolean).join(' ');
 ---
-<Layout title={title} description={`${title}. Browse by city and tag. The initial collection contains clearly labelled fictional examples.`} section="restaurants">
-  <header class="intro"><p class="eyebrow">02 / Places to eat</p><h1>{title}</h1><p class="lede">A notebook for the next good meal.</p><p class="section-note">These three restaurants are fictional examples. All food images are generated illustrations.</p></header>
+<Layout title={title} description={`${title}. Browse by city and tag. Fictional examples are clearly labelled.`} section="restaurants">
+  <header class="intro"><p class="eyebrow">02 / Places to eat</p><h1>{title}</h1><p class="lede">A notebook for the next good meal.</p><p class="section-note">Illustrated notes on places to eat. Fictional examples are labelled; where a photo is available, you can reveal it.</p></header>
   <div class="filters"><nav aria-label="Filter by location"><h2>Location</h2><ul><li><a href={filterPath({ tag: filter.tag })} aria-current={!filter.city ? 'page' : undefined}>All locations</a></li>{cities.map(city => <li><a href={filterPath({ city: city.slug, tag: filter.tag })} aria-current={filter.city === city.slug ? 'page' : undefined}>{city.name}</a></li>)}</ul></nav>
-  <nav aria-label="Filter by tag"><h2>Tags</h2><ul><li><a href={filterPath({ city: filter.city })} aria-current={!filter.tag ? 'page' : undefined}>All tags</a></li>{tags.map(tag => <li><a href={filterPath({ city: filter.city, tag })} aria-current={filter.tag === tag ? 'page' : undefined}>{tagLabels[tag]}</a></li>)}</ul></nav></div>
+  <nav aria-label="Filter by tag"><h2>Tags</h2><ul><li><a href={filterPath({ city: filter.city })} aria-current={!filter.tag ? 'page' : undefined}>All tags</a></li>{tags.map(tag => <li><a href={filterPath({ city: filter.city, tag })} aria-current={filter.tag === tag ? 'page' : undefined}>{tagLabel(tag)}</a></li>)}</ul></nav></div>
   <div class="results-heading"><h2>{results.length} {results.length === 1 ? 'restaurant' : 'restaurants'}</h2>{(filter.city || filter.tag) && <a href="/restaurants">Reset filters</a>}</div>
   {results.length ? <div class="grid">{results.map(restaurant => <RestaurantCard restaurant={restaurant} filter={filter}/>)}</div> : <div class="empty"><h3>No restaurants match these filters.</h3><p>Try another location or tag, or <a href="/restaurants">see all restaurants</a>.</p></div>}
 </Layout>

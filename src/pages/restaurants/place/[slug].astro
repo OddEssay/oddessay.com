@@ -1,0 +1,27 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import RestaurantImage from '../../../components/RestaurantImage.astro';
+import { filterPath, tagLabel } from '../../../lib/restaurants';
+export async function getStaticPaths() {
+  return (await getCollection('restaurants')).map(restaurant => ({ params: { slug: restaurant.id }, props: { restaurant } }));
+}
+interface Props { restaurant: CollectionEntry<'restaurants'> }
+const { restaurant } = Astro.props;
+const { data: r } = restaurant;
+const { Content } = await render(restaurant);
+---
+<Layout title={r.title} description={r.summary} section="restaurants">
+  <article class="prose restaurant-detail">
+    <a href="/restaurants">← All restaurants</a>
+    <header class="intro">
+      {r.example && <p class="eyebrow">Fictional sample restaurant</p>}
+      <h1>{r.title}</h1>
+      <p class="lede">{r.summary}</p>
+      <a class="location" href={filterPath({ city: r.citySlug })}>{r.city}</a>
+      <ul class="tags">{r.tags.map(tag => <li><a href={filterPath({ tag })}>{tagLabel(tag)}</a></li>)}</ul>
+    </header>
+    <RestaurantImage restaurant={r}/>
+    <Content/>
+  </article>
+</Layout>

@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { file, glob } from 'astro/loaders';
-import { tags } from './lib/restaurants';
+import { restaurantSchema } from './lib/restaurant-schema';
 
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 const text = z.string().trim().min(1);
@@ -20,13 +20,12 @@ const projects = defineCollection({
   schema: z.object({ id: slug, title: text, url: z.url().refine(url => /^https?:\/\//.test(url)), technologies: z.array(text).min(1) }),
 });
 const restaurants = defineCollection({
-  loader: file('src/data/restaurants.json', { parser: uniqueRecords }),
-  schema: ({ image }) => z.object({
-    id: slug, title: text, image: image(), imageAlt: text,
-    city: text, citySlug: slug.refine(value => value !== 'all', 'The city slug all is reserved'),
-    tags: z.array(z.enum(tags)).min(1).refine(values => new Set(values).size === values.length, 'Tags must be unique'),
-    example: z.boolean(),
+  // Entries and their tags are authored in Markdown; no registry needs updating.
+  loader: glob({
+    pattern: '*.md', base: './src/content/restaurants',
+    generateId: ({ entry }) => slug.parse(entry.replace(/\.md$/, '')),
   }),
+  schema: ({ image }) => restaurantSchema(image()),
 });
 const essays = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/essays' }),

@@ -1,15 +1,19 @@
+import { readRestaurants } from '../scripts/restaurant-content.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { filterRoutes, locations, tags } from '../src/lib/restaurants.ts';
-const restaurants = JSON.parse(readFileSync(new URL('../src/data/restaurants.json', import.meta.url)));
+import { filterRoutes, locations, restaurantTags } from '../src/lib/restaurants.ts';
+const restaurants = readRestaurants();
+const tags = restaurantTags(restaurants);
 const cities = locations(restaurants);
+const alphabetical = [...restaurants].sort((a, b) => a.title.localeCompare(b.title));
+const escapeHTML = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 const page = path => readFileSync(new URL(`../dist/${path}.html`, import.meta.url), 'utf8');
 const stripScripts = html => html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '').replace(/<astro-island\b[^>]*>/g, '');
 
 test('every supported filter has a generated page, including empty combinations', () => {
-  for (const route of filterRoutes(cities.map(city => city.slug))) {
+  for (const route of filterRoutes(cities.map(city => city.slug), tags)) {
     const html = page(`restaurants${route ? `/${route}` : ''}`);
     assert.match(html, /Filter by location/);
     assert.match(html, /Filter by tag/);
@@ -37,18 +41,20 @@ test('rendered filter controls preserve the other selection', () => {
     'href="/restaurants/london/small-plates">Small Plates',
     'href="/restaurants/london/vegan" aria-current="page">Vegan',
   ]) assert.ok(html.includes(link), link);
-  assert.match(html, /<h3>Garden Table<\/h3>/);
-  assert.doesNotMatch(html, /<h3>Little Plates<\/h3>/);
+  assert.match(html, /<h3><a href="\/restaurants\/place\/garden-table">Garden Table<\/a><\/h3>/);
+  assert.doesNotMatch(html, /<h3><a[^>]*>Little Plates<\/a><\/h3>/);
 });
 test('homepage and listings render sample labels, local images, project and essay links', () => {
   for (const name of ['index', 'restaurants']) {
     const html = stripScripts(page(name));
-    assert.equal((html.match(/Fictional sample restaurant/g) ?? []).length, 3);
-    assert.equal((html.match(/Example · Generated illustration/g) ?? []).length, 3);
+    const visible = name === 'index' ? alphabetical.slice(0, 3) : alphabetical;
+    const examples = visible.filter(r => r.example).length;
+    assert.equal((html.match(/Fictional sample restaurant/g) ?? []).length, examples);
+    assert.equal((html.match(/Example · <span data-caption>Generated illustration/g) ?? []).length, examples);
     const images = [...html.matchAll(/<img\b[^>]*>/g)];
-    assert.equal(images.length, 3);
+    assert.equal(images.length, visible.reduce((count, r) => count + (r.originalImage ? 2 : 1), 0));
     for (const [image] of images) {
-      assert.match(image, /alt="Generated pencil illustration/);
+      assert.match(image, /alt="[^"]+"/);
       assert.match(image, /width="640"/);
       assert.match(image, /height="420"/);
       const src = image.match(/src="([^"]+)"/)[1];
@@ -82,4 +88,25 @@ test('Markdown, metadata, navigation, font and hydration assets are present', ()
   assert.match(page('restaurants'), /component-export="SketchCard"/);
   assert.match(page('restaurants'), /component-export="SketchBadge"/);
   assert.ok(readdirSync('dist/_astro').some(file => file.endsWith('.woff2')));
+});
+
+test('restaurant detail pages render Markdown, summaries, metadata and links', () => {
+  for (const restaurant of restaurants) {
+    const detail = page(`restaurants/place/${restaurant.id}`);
+    assert.ok(detail.includes(`<h1>${escapeHTML(restaurant.title)}</h1>`));
+    assert.ok(detail.includes(`<meta name="description" content="${escapeHTML(restaurant.summary)}"`));
+    if (restaurant.body.includes('## At the table')) assert.match(detail, /<h2 id="at-the-table">At the table<\/h2>/);
+    assert.equal(detail.includes('Fictional sample restaurant'), restaurant.example);
+    assert.match(detail, /href="\/restaurants">← All restaurants/);
+    assert.ok(detail.includes(`href="/restaurants/${restaurant.citySlug}"`));
+    for (const tag of restaurant.tags) assert.ok(detail.includes(`href="/restaurants/all/${tag}"`));
+    for (const name of ['index', 'restaurants']) {
+      const html = page(name);
+      const visible = name === 'restaurants' || alphabetical.slice(0, 3).some(r => r.id === restaurant.id);
+      if (visible) assert.ok(html.includes(escapeHTML(restaurant.summary)));
+      assert.equal(html.includes(`href="/restaurants/place/${restaurant.id}"`), visible);
+    }
+    assert.equal(/<button[^>]*data-toggle/.test(stripScripts(detail)), Boolean(restaurant.originalImage));
+  }
+  for (const route of ['place', 'place/missing', 'place/garden-table/extra']) assert.ok(!existsSync(`dist/restaurants/${route}.html`));
 });

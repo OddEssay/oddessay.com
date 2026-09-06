@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RestaurantCard from '../../components/RestaurantCard.astro';
+import RestaurantImage from '../../components/RestaurantImage.astro';
+import image from '../../../tests/fixtures/cover.png';
+import originalImage from '../../../tests/fixtures/photo.png';
+const data = { title: 'Paired image fixture', summary: 'Geometric test assets, not a restaurant or photograph.', image, originalImage, imageAlt: 'Monochrome circle and square', originalImageAlt: 'Colour circle and square', city: 'London', citySlug: 'london', tags: ['vegan'] as const, example: true };
+const restaurant = { id: 'fixture', collection: 'restaurants' as const, data: { ...data, tags: [...data.tags] } };
+---
+<Layout title="Image interaction fixture" description="Temporary browser test page" section="restaurants">
+  <h1>Image interaction fixture</h1>
+  <p>Geometric test assets, not restaurant photos.</p>
+  <div class="grid"><RestaurantCard restaurant={restaurant}/><RestaurantCard restaurant={{ ...restaurant, id: 'fixture-two' }}/></div>
+  <article class="prose"><h2>Full-page image</h2><RestaurantImage restaurant={restaurant.data}/></article>
+  <h2>Illustration only</h2><RestaurantImage restaurant={{ ...restaurant.data, originalImage: undefined, originalImageAlt: undefined }}/>
+</Layout>

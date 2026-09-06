@@ -3,3 +3,9 @@ dist/
 .astro/
 .wrangler/
 .DS_Store
+test-results/
+playwright-report/
+!.agents/
+!.agents/skills/
+!.agents/skills/restaurant-cover/
+!.agents/skills/restaurant-cover/SKILL.md

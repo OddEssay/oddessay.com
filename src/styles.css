@@ -3,7 +3,7 @@
 body { margin: 0; color: var(--sketch-fg); font-family: var(--body-font); font-size: 16px; line-height: 1.65; }
 a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
-a:focus-visible, [tabindex]:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 h1,h2,h3,.wordmark,.sidebar a { font-family: var(--sketch-font); font-weight: 600; line-height: 1.3; }
 h1 { font-size: clamp(2.4rem, 4.5vw, 4rem); margin: .45em 0; letter-spacing: -.025em; }
 h2 { font-size: 1.65rem; margin: 0; }
@@ -31,9 +31,17 @@ section { margin: 48px 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 235px), 1fr)); gap: 22px; }
 .grid > article { min-width: 0; }
 .restaurant-card, .project-card { height: 100%; }
-.restaurant-card figure { margin: 0; }
-.restaurant-card img { width: 100%; height: auto; aspect-ratio: 640/420; object-fit: cover; display: block; }
-.restaurant-card figcaption { padding: 6px 16px; color: #555; font-size: .66rem; border-bottom: 1px solid var(--sketch-border); }
+restaurant-image { display: block; }
+restaurant-image figure { margin: 0; }
+.restaurant-image-frame { position: relative; aspect-ratio: 640/420; overflow: hidden; }
+.restaurant-image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.restaurant-image-frame [data-photo] { position: absolute; inset: 0; opacity: 0; transition: opacity 180ms ease; }
+restaurant-image[data-photo-visible="true"] [data-photo] { opacity: 1; }
+restaurant-image figcaption { padding: 6px 16px; color: #555; font-size: .66rem; border-bottom: 1px solid var(--sketch-border); }
+restaurant-image [data-toggle] { margin: 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+restaurant-image [data-toggle]:hover { text-decoration-thickness: 2px; }
+restaurant-image button[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { .restaurant-image-frame [data-photo] { transition: none; } }
 .card-content { padding: 20px; }
 .card-content .eyebrow { font-size: .6rem; }
 .location { font-size: .82rem; }
