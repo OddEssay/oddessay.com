@@ -1,4 +1,5 @@
 import { chromium, expect } from '@playwright/test';
+import { checkAnalyticsCsp } from './check-analytics-csp.mjs';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 
@@ -110,14 +111,7 @@ try {
   await page.unroute('**/_astro/photo.*');
   await root.getByRole('button').press('Enter');
   await expect(root).toHaveAttribute('data-photo-visible', 'true');
-  // Exercise the analytics script allowlist and both reporting paths without
-  // a real beacon token or sending traffic to the analytics service.
-  await page.route('https://static.cloudflareinsights.com/beacon.min.js', route => route.fulfill({ contentType: 'text/javascript', body: "window.analyticsProbe = Promise.all([fetch('/cdn-cgi/rum', {method:'POST'}), fetch('https://cloudflareinsights.com/cdn-cgi/rum', {method:'POST'})]);" }));
-  let beacons = 0;
-  await page.route('**/cdn-cgi/rum', route => { beacons++; return route.fulfill({ status: 204, headers: { 'access-control-allow-origin': '*' } }); });
-  await page.addScriptTag({ url: 'https://static.cloudflareinsights.com/beacon.min.js' });
-  await page.evaluate(() => window.analyticsProbe);
-  assert.equal(beacons, 2);
+  await checkAnalyticsCsp(page);
   for (const path of ['/projects', '/essays', '/essays/2026-09-06-first-post', '/restaurants', '/restaurants/place/hawksmoor', '/missing-page']) {
     const response = await page.goto(origin + path);
     assert.ok(response.headers()['content-security-policy']);

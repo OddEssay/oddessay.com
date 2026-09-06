@@ -71,11 +71,11 @@ The production browser suite tests 390, 650, 900 and 1440px widths at DPR 1, 2 a
 
 ## Security and verification
 
-[Astro CSP hashing](https://docs.astro.build/en/reference/configuration-reference/#securitycsp) generates script hashes. The build integration unions policies from all 17 pages, removes redundant meta policies and writes the authoritative Cloudflare `_headers` response policy. Inline styles remain allowed; scripts require this origin, approved hashes or the specific Cloudflare analytics script URL. Eval and unapproved inline scripts are not permitted.
+[Astro CSP hashing](https://docs.astro.build/en/reference/configuration-reference/#securitycsp) generates script hashes. The build integration unions policies from all 17 pages, removes redundant meta policies and writes the authoritative Cloudflare `_headers` response policy. Inline styles remain allowed; scripts require this origin, approved hashes or the Cloudflare analytics script URL and its versioned descendants under `/beacon.min.js/`. Eval and unapproved inline scripts are not permitted.
 
 The CSP includes default-src self, object-src none, base-uri self, form-action self and response-header frame-ancestors self. SAMEORIGIN, nosniff, strict-origin-when-cross-origin and same-origin COOP headers are present. HSTS is max-age=86400 without subdomains or preload. Trusted Types enforcement remains excluded.
 
-The generated CSP is under 700 characters, well below [Cloudflare's 2,000-character per-line limit](https://developers.cloudflare.com/workers/static-assets/headers/). Tests verify every generated inline script hash, reject missing or oversized policies and check normal pages plus custom 404 responses.
+The generated CSP is under 800 characters, well below [Cloudflare's 2,000-character per-line limit](https://developers.cloudflare.com/workers/static-assets/headers/). Tests verify every generated inline script hash, reject missing or oversized policies and check normal pages plus custom 404 responses.
 
 Production browser checks observe no CSP violations or JavaScript exceptions while hydrating islands, drawing/resizing sketches, navigating and toggling images. The [Cloudflare analytics script and reporting endpoints](https://developers.cloudflare.com/web-analytics/faq/) are allowed. A mocked external script exercises both the same-origin and external reporting paths under the enforced policy without submitting analytics. Actual edge injection and receipt by Cloudflare are not tested locally.
 
@@ -105,3 +105,9 @@ node scripts/measure-lighthouse.mjs http://127.0.0.1:4325 /tmp/oddessay-lighthou
 ```
 
 Use the same Chrome executable for both builds (`CHROME_PATH` can select it), and preserve identical screen/throttling settings. `LIGHTHOUSE_DIR` overrides the external tooling directory. The audit server is only a fixed comparison transport; use Wrangler for Cloudflare behavior.
+
+## Follow-up: versioned Cloudflare beacon
+
+The live edge injects `/beacon.min.js/v<release>`, which the original exact-path CSP source did not match. The initial mocked analytics check covered only `/beacon.min.js` and missed this production URL shape. The policy now includes both the exact unversioned URL and the `/beacon.min.js/` path prefix. It does not allow unrelated paths on the analytics host.
+
+`node scripts/check-analytics-csp.mjs` reproduces this in Chromium using the generated response policy and mocked traffic. It failed with the reported CSP violation before the fix. It checks the unversioned URL, the reported version and a future version, plus both reporting endpoints, and verifies unrelated paths remain blocked. The same check is included in the full production browser suite.

@@ -10,7 +10,9 @@ export default defineConfig({
   security: {
     csp: {
       directives: ["default-src 'self'", "connect-src 'self' https://cloudflareinsights.com", "object-src 'none'", "base-uri 'self'", "form-action 'self'"],
-      scriptDirective: { resources: ["'self'", 'https://static.cloudflareinsights.com/beacon.min.js'] },
+      // Cloudflare injects /beacon.min.js/v<release>; the trailing slash allows
+      // versioned descendants without allowing unrelated scripts on the host.
+      scriptDirective: { resources: ["'self'", 'https://static.cloudflareinsights.com/beacon.min.js', 'https://static.cloudflareinsights.com/beacon.min.js/'] },
     },
   },
   trailingSlash: 'never',
