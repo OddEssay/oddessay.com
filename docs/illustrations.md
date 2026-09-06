@@ -20,7 +20,7 @@ Prompt:
 
 ## Fictional sample illustrations
 
-Created with the built-in image generation tool on 6 September 2026. All three illustrate fictional sample restaurants and do not depict actual dishes or venues. The site labels each displayed illustration and sample restaurant. Original PNGs live in the paths below; Astro produces optimized local WebP versions during the build.
+Created with the built-in image generation tool on 6 September 2026. All three illustrate fictional sample restaurants and do not depict actual dishes or venues. These historical assets are retained as illustration provenance; Garden Table remains the cover skill’s style reference. Original PNGs live in the paths below; Astro produces optimized local WebP versions during the build.
 
 ## Garden Table
 

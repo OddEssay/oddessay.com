@@ -8,7 +8,6 @@ originalImageAlt: "Original photo of noodle soup, a bamboo platter of Lao dishes
 city: "Liverpool"
 citySlug: "liverpool"
 tags: ["spicy"]
-example: false
 ---
 
 ## At the table

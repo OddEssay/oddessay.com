@@ -18,7 +18,6 @@ export function restaurantSchema<T extends z.ZodType>(image: T) {
       .refine(value => !['all', 'place'].includes(value), 'City slugs all and place are reserved'),
     tags: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Use lowercase hyphenated tags, for example sunday-dinner')).min(1)
       .refine(values => new Set(values).size === values.length, 'Tags must be unique'),
-    example: z.boolean(),
   }).refine(value => (value.originalImage !== undefined) === (value.originalImageAlt !== undefined),
     'originalImage and originalImageAlt must be supplied together');
 }

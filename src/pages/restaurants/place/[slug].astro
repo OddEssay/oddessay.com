@@ -15,7 +15,6 @@ const { Content } = await render(restaurant);
   <article class="prose restaurant-detail">
     <a href="/restaurants">← All restaurants</a>
     <header class="intro">
-      {r.example && <p class="eyebrow">Fictional sample restaurant</p>}
       <h1>{r.title}</h1>
       <p class="lede">{r.summary}</p>
       <a class="location" href={filterPath({ city: r.citySlug })}>{r.city}</a>

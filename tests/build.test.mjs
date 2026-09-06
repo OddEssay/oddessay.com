@@ -33,24 +33,22 @@ test('every supported filter has a generated page, including empty combinations'
   assert.match(page('404'), /Page not found/);
 });
 test('rendered filter controls preserve the other selection', () => {
-  const html = page('restaurants/london/vegan');
+  const html = page('restaurants/liverpool/spicy');
   for (const link of [
-    'href="/restaurants/all/vegan">All locations',
-    ...cities.filter(city => city.slug !== 'london').map(city => `href="/restaurants/${city.slug}/vegan">${city.name}`),
-    'href="/restaurants/london">All tags',
-    'href="/restaurants/london/small-plates">Small Plates',
-    'href="/restaurants/london/vegan" aria-current="page">Vegan',
+    'href="/restaurants/all/spicy">All locations',
+    'href="/restaurants/liverpool">All tags',
+    'href="/restaurants/liverpool/wine">Wine',
+    'href="/restaurants/liverpool/spicy" aria-current="page">Spicy',
   ]) assert.ok(html.includes(link), link);
-  assert.match(html, /<h3><a href="\/restaurants\/place\/garden-table">Garden Table<\/a><\/h3>/);
-  assert.doesNotMatch(html, /<h3><a[^>]*>Little Plates<\/a><\/h3>/);
+  assert.match(html, /<h3><a href="\/restaurants\/place\/bistro-lao">Bistro Lao<\/a><\/h3>/);
+  assert.doesNotMatch(html, /<h3><a[^>]*>Hawksmoor<\/a><\/h3>/);
 });
-test('homepage and listings render sample labels, local images, project and essay links', () => {
+test('homepage and listings render real restaurants, local images, project links and empty essays', () => {
   for (const name of ['index', 'restaurants']) {
     const html = stripScripts(page(name));
     const visible = name === 'index' ? alphabetical.slice(0, 3) : alphabetical;
-    const examples = visible.filter(r => r.example).length;
-    assert.equal((html.match(/Fictional sample restaurant/g) ?? []).length, examples);
-    assert.equal((html.match(/Example · <span data-caption>Generated illustration/g) ?? []).length, examples);
+    assert.doesNotMatch(html, /Fictional sample restaurant|Example ·|Example essay/);
+    assert.deepEqual([...html.matchAll(/<h3><a href="\/restaurants\/place\/([^"]+)"/g)].map(match => match[1]), visible.map(r => r.id));
     const images = [...html.matchAll(/<img\b[^>]*>/g)];
     assert.equal(images.length, visible.reduce((count, r) => count + (r.originalImage ? 2 : 1), 0));
     for (const [image] of images) {
@@ -67,16 +65,12 @@ test('homepage and listings render sample labels, local images, project and essa
     assert.match(page(name), /Cloudflare Serverless/);
   }
   for (const name of ['index', 'essays']) {
-    assert.match(page(name), /Example essay/);
-    assert.match(page(name), /href="\/essays\/a-place-to-keep-things"/);
+    assert.match(page(name), /No essays yet\./);
+    assert.doesNotMatch(page(name), /href="\/essays\/[^"]+"/);
   }
 });
 test('Markdown, metadata, navigation, font and hydration assets are present', () => {
-  const essay = page('essays/a-place-to-keep-things');
-  assert.match(essay, /<h2 id="a-small-beginning">A small beginning<\/h2>/);
-  assert.match(essay, /<blockquote>/);
-  assert.match(essay, /Example essay · Demonstration content/);
-  for (const name of ['index', 'projects', 'restaurants', 'essays', 'essays/a-place-to-keep-things', '404']) {
+  for (const name of ['index', 'projects', 'restaurants', 'essays', '404']) {
     const html = page(name);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
     assert.match(html, /<title>.+? \| OddEssay.com<\/title>/);
@@ -96,7 +90,7 @@ test('restaurant detail pages render Markdown, summaries, metadata and links', (
     assert.ok(detail.includes(`<h1>${escapeHTML(restaurant.title)}</h1>`));
     assert.ok(detail.includes(`<meta name="description" content="${escapeHTML(restaurant.summary)}"`));
     if (restaurant.body.includes('## At the table')) assert.match(detail, /<h2 id="at-the-table">At the table<\/h2>/);
-    assert.equal(detail.includes('Fictional sample restaurant'), restaurant.example);
+    assert.doesNotMatch(detail, /Fictional sample restaurant|Example ·/);
     assert.match(detail, /href="\/restaurants">← All restaurants/);
     assert.ok(detail.includes(`href="/restaurants/${restaurant.citySlug}"`));
     for (const tag of restaurant.tags) assert.ok(detail.includes(`href="/restaurants/all/${tag}"`));
@@ -109,4 +103,11 @@ test('restaurant detail pages render Markdown, summaries, metadata and links', (
     assert.equal(/<button[^>]*data-toggle/.test(stripScripts(detail)), Boolean(restaurant.originalImage));
   }
   for (const route of ['place', 'place/missing', 'place/garden-table/extra']) assert.ok(!existsSync(`dist/restaurants/${route}.html`));
+});
+
+test('retired content and its unused filters have no generated routes', () => {
+  assert.deepEqual(restaurants.map(r => r.id).sort(), ['bistro-lao', 'hawksmoor']);
+  for (const route of ['restaurants/place/garden-table', 'restaurants/place/little-plates', 'essays/a-place-to-keep-things', 'restaurants/london', 'restaurants/all/vegan', 'restaurants/all/vegetarian', 'restaurants/all/small-plates']) {
+    assert.ok(!existsSync(`dist/${route}.html`), route);
+  }
 });

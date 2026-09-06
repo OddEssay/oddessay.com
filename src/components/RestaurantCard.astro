@@ -9,7 +9,7 @@ const { restaurant: { data: r, id }, filter = {} } = Astro.props;
 <article>
   <SketchCard client:load block padding={0} className="restaurant-card">
     <RestaurantImage restaurant={r}/>
-    <div class="card-content">{r.example && <p class="eyebrow">Fictional sample restaurant</p>}<h3><a href={`/restaurants/place/${id}`}>{r.title}</a></h3>
+    <div class="card-content"><h3><a href={`/restaurants/place/${id}`}>{r.title}</a></h3>
       <p>{r.summary}</p>
       <a class="location" href={filterPath({ city: r.citySlug, tag: filter.tag })}>{r.city}</a>
       <ul class="tags">{r.tags.map(tag => <li><a href={filterPath({ city: filter.city, tag })}><SketchBadge client:load>{tagLabel(tag)}</SketchBadge></a></li>)}</ul>

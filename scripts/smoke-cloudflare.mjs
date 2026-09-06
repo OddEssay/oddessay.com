@@ -6,18 +6,18 @@ import { filterRoutes, locations, restaurantTags } from '../src/lib/restaurants.
 const origin = 'http://127.0.0.1:8787';
 const restaurants = readRestaurants();
 const routes = filterRoutes(locations(restaurants).map(city => city.slug), restaurantTags(restaurants));
-for (const path of ['/', '/projects', '/essays', '/essays/a-place-to-keep-things',
+for (const path of ['/', '/projects', '/essays',
   ...restaurants.map(r => `/restaurants/place/${r.id}`),
   ...routes.map(route => `/restaurants${route ? `/${route}` : ''}`)]) {
   const response = await fetch(`${origin}${path}`, { redirect: 'manual' });
   assert.equal(response.status, 200, path);
 }
-for (const path of ['/restaurants/unknown-city', '/restaurants/london/unknown-tag', '/restaurants/london/vegan/extra', '/restaurants/all', '/restaurants/place', '/restaurants/place/missing', '/restaurants/place/garden-table/extra']) {
+for (const path of ['/restaurants/place/garden-table', '/restaurants/place/little-plates', '/essays/a-place-to-keep-things', '/restaurants/london', '/restaurants/all/vegan', '/restaurants/unknown-city', '/restaurants/london/unknown-tag', '/restaurants/london/vegan/extra', '/restaurants/all', '/restaurants/place', '/restaurants/place/missing', '/restaurants/place/garden-table/extra']) {
   const response = await fetch(`${origin}${path}`, { redirect: 'manual' });
   assert.equal(response.status, 404, path);
   assert.match(await response.text(), /Page not found/);
 }
-for (const path of ['/projects/', '/restaurants/london/', '/restaurants/london.html']) {
+for (const path of ['/projects/', '/restaurants/liverpool/', '/restaurants/liverpool.html']) {
   const response = await fetch(`${origin}${path}`, { redirect: 'manual' });
   assert.equal(response.status, 307, path);
   const target = new URL(response.headers.get('location'), origin);

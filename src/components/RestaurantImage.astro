@@ -11,7 +11,7 @@ const { restaurant: r } = Astro.props;
       {r.originalImage && <Image data-photo src={r.originalImage} alt={r.originalImageAlt!} aria-hidden="true" width={640} height={420} format="webp" loading="lazy"/>}
     </div>
     <figcaption>
-      {r.example && 'Example · '}<span data-caption>Generated illustration</span>
+      <span data-caption>Generated illustration</span>
       {r.originalImage && <button type="button" data-toggle hidden aria-pressed="false" aria-label={`Show photo of ${r.title}`}></button>}
     </figcaption>
   </figure>

@@ -6,4 +6,4 @@ interface Props { essay: CollectionEntry<'essays'> }
 const { essay } = Astro.props;
 const { Content } = await render(essay);
 ---
-<Layout title={essay.data.title} description={essay.data.summary} section="essays"><article class="prose"><a href="/essays">← All essays</a><header class="intro">{essay.data.example && <p class="eyebrow">Example essay · Demonstration content</p>}<h1>{essay.data.title}</h1><time datetime={essay.data.date.toISOString().slice(0,10)}>{essay.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time><p class="lede">{essay.data.summary}</p></header><Content/></article></Layout>
+<Layout title={essay.data.title} description={essay.data.summary} section="essays"><article class="prose"><a href="/essays">← All essays</a><header class="intro"><h1>{essay.data.title}</h1><time datetime={essay.data.date.toISOString().slice(0,10)}>{essay.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time><p class="lede">{essay.data.summary}</p></header><Content/></article></Layout>

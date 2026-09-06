@@ -8,7 +8,6 @@ originalImageAlt: "Original photo of roast beef, Yorkshire pudding, roast potato
 city: "Liverpool"
 citySlug: "liverpool"
 tags: ["sunday-dinner","cocktails","wine"]
-example: false
 ---
 
 ## Stake and Wine

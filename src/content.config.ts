@@ -29,6 +29,6 @@ const restaurants = defineCollection({
 });
 const essays = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/essays' }),
-  schema: z.object({ title: text, summary: text, date: z.coerce.date(), example: z.boolean() }),
+  schema: z.object({ title: text, summary: text, date: z.coerce.date() }),
 });
 export const collections = { projects, restaurants, essays };

@@ -1,0 +1,9 @@
+---
+title: Authoring essay fixture
+summary: Temporary essay summary
+date: 2026-09-06
+---
+
+## A fresh thought
+
+> A temporary quotation.

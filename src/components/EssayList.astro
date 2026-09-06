@@ -3,4 +3,4 @@ import type { CollectionEntry } from 'astro:content';
 interface Props { essays: CollectionEntry<'essays'>[] }
 const { essays } = Astro.props;
 ---
-<div class="essay-list">{essays.map(essay => <article>{essay.data.example && <p class="eyebrow">Example essay</p>}<time datetime={essay.data.date.toISOString().slice(0, 10)}>{essay.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time><h3><a href={`/essays/${essay.id}`}>{essay.data.title} <span aria-hidden="true">↗</span></a></h3><p>{essay.data.summary}</p></article>)}</div>
+{essays.length === 0 ? <p>No essays yet.</p> : <div class="essay-list">{essays.map(essay => <article><time datetime={essay.data.date.toISOString().slice(0, 10)}>{essay.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time><h3><a href={`/essays/${essay.id}`}>{essay.data.title} <span aria-hidden="true">↗</span></a></h3><p>{essay.data.summary}</p></article>)}</div>}

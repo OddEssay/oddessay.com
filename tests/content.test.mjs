@@ -16,7 +16,7 @@ test('new restaurant tags come from Markdown without registering them in code', 
   assert.equal(schema.safeParse({ ...valid, tags: ['cocktails', 'sunday-roast'] }).success, true);
 });
 test('required fields, tags, reserved cities and local image pairs are enforced', () => {
-  for (const field of ['title', 'summary', 'image', 'imageAlt', 'city', 'citySlug', 'tags', 'example']) {
+  for (const field of ['title', 'summary', 'image', 'imageAlt', 'city', 'citySlug', 'tags']) {
     const input = { ...valid };
     delete input[field];
     assert.equal(schema.safeParse(input).success, false, field);
