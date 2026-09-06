@@ -1,5 +1,5 @@
 [
   { "id": "garden-table", "title": "Garden Table", "image": "../assets/restaurants/garden-table.png", "imageAlt": "Generated pencil illustration of a vegetable and bean bowl with bread; not a real restaurant dish.", "city": "London", "citySlug": "london", "tags": ["vegan", "vegetarian"], "example": true },
   { "id": "little-plates", "title": "Little Plates", "image": "../assets/restaurants/little-plates.png", "imageAlt": "Generated pencil illustration of peppers, potatoes, olives and wine; not a real restaurant dish.", "city": "London", "citySlug": "london", "tags": ["vegetarian", "small-plates", "wine"], "example": true },
-  { "id": "pepper-yard", "title": "Pepper Yard", "image": "../assets/restaurants/pepper-yard.png", "imageAlt": "Generated pencil illustration of spicy mushroom noodles and beer; not a real restaurant dish.", "city": "Bristol", "citySlug": "bristol", "tags": ["spicy", "beer"], "example": true }
+  { "id": "pepper-yard", "title": "Pepper Yard", "image": "../assets/restaurants/pepper-yard.png", "imageAlt": "Generated pencil illustration of spicy mushroom noodles and beer; not a real restaurant dish.", "city": "Liverpool", "citySlug": "liverpool", "tags": ["spicy", "beer"], "example": true }
 ]
