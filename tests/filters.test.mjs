@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import { filterPath, parseFilter, filterRoutes, matchingRestaurants, restaurantTags, tagLabel, locations } from '../src/lib/restaurants.ts';
 // Fixed fixtures keep filter logic tests independent of editorial changes.
 const restaurants = [
-  { title: 'Garden Table', city: 'London', citySlug: 'london', tags: ['vegan', 'vegetarian'] },
-  { title: 'Little Plates', city: 'London', citySlug: 'london', tags: ['vegetarian', 'small-plates', 'wine'] },
-  { title: 'Pepper Yard', city: 'Bristol', citySlug: 'bristol', tags: ['spicy', 'beer', 'sunday-dinner'] },
+  { title: 'Garden Table', city: 'London', tags: ['vegan', 'vegetarian'] },
+  { title: 'Little Plates', city: 'London', tags: ['vegetarian', 'small-plates', 'wine'] },
+  { title: 'Pepper Yard', city: 'Bristol', tags: ['spicy', 'beer', 'sunday-dinner'] },
 ];
 const cities = locations(restaurants).map(c => c.slug);
 const tags = restaurantTags(restaurants);
@@ -15,6 +15,14 @@ test('location-only routes select a city', () => {
   const filter = parseFilter('london', cities, tags);
   assert.deepEqual(filter, { city: 'london' });
   assert.deepEqual(titles(filter), ['Garden Table', 'Little Plates']);
+});
+test('multiword cities derive underscore routes from their names', () => {
+  const entries = [{ ...restaurants[0], city: 'New York City' }];
+  const locationsList = locations(entries);
+  assert.deepEqual(locationsList, [{ slug: 'new_york_city', name: 'New York City' }]);
+  const filter = parseFilter('new_york_city/vegan', locationsList.map(city => city.slug), tags);
+  assert.equal(filterPath(filter), '/restaurants/new_york_city/vegan');
+  assert.deepEqual(matchingRestaurants(entries, filter), entries);
 });
 test('tag-only routes match explicit tags across locations', () => {
   assert.deepEqual(parseFilter('all/vegan', cities, tags), { tag: 'vegan' });
@@ -57,6 +65,6 @@ test('Small Plates and Sunday Dinner have stable slugs; all supported tags are r
   assert.deepEqual(new Set(restaurants.flatMap(r => r.tags)), new Set(tags));
 });
 test('location registry rejects reserved or conflicting city slugs', () => {
-  for (const citySlug of ['all', 'place']) assert.throws(() => locations([{ ...restaurants[0], citySlug }]));
-  assert.throws(() => locations([restaurants[0], { ...restaurants[0], city: 'Different city' }]));
+  for (const city of ['All', 'Place']) assert.throws(() => locations([{ ...restaurants[0], city }]));
+  assert.throws(() => locations([restaurants[0], { ...restaurants[0], city: 'LONDON' }]));
 });

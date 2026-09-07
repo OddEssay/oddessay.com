@@ -6,7 +6,6 @@ imageAlt: "Generated pencil and charcoal illustration of noodle soup, a bamboo p
 originalImage: "../../assets/restaurants/bistro-lao/photo.png"
 originalImageAlt: "Original photo of noodle soup, a bamboo platter of Lao dishes and papaya salad at Bistro Lao."
 city: "Liverpool"
-citySlug: "liverpool"
 tags: ["spicy"]
 url: https://bistrolao.uk/
 ---

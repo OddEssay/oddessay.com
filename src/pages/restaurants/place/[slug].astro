@@ -2,7 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import RestaurantImage from '../../../components/RestaurantImage.astro';
-import { filterPath, tagLabel } from '../../../lib/restaurants';
+import { citySlug, filterPath, tagLabel } from '../../../lib/restaurants';
 export async function getStaticPaths() {
   return (await getCollection('restaurants')).map(restaurant => ({ params: { slug: restaurant.id }, props: { restaurant } }));
 }
@@ -18,7 +18,7 @@ const { Content } = await render(restaurant);
       <h1>{r.title}</h1>
       <a class="restaurant-url" href={r.url}>{r.url}</a>
       <p class="lede">{r.summary}</p>
-      <a class="location" href={filterPath({ city: r.citySlug })}>{r.city}</a>
+      <a class="location" href={filterPath({ city: citySlug(r.city) })}>{r.city}</a>
       <ul class="tags">{r.tags.map(tag => <li><a href={filterPath({ tag })}>{tagLabel(tag)}</a></li>)}</ul>
     </header>
     <RestaurantImage restaurant={r} presentation="detail"/>

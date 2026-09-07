@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { filterRoutes, locations, restaurantTags } from '../src/lib/restaurants.ts';
+import { citySlug, filterRoutes, locations, restaurantTags } from '../src/lib/restaurants.ts';
 const restaurants = readRestaurants();
 const tags = restaurantTags(restaurants);
 const cities = locations(restaurants);
@@ -21,7 +21,7 @@ test('every supported filter has a generated page, including empty combinations'
   }
   for (const city of cities) {
     for (const tag of tags) {
-      if (restaurants.some(r => r.citySlug === city.slug && r.tags.includes(tag))) continue;
+      if (restaurants.some(r => citySlug(r.city) === city.slug && r.tags.includes(tag))) continue;
       const html = page(`restaurants/${city.slug}/${tag}`);
       assert.match(html, /No restaurants match these filters/);
       assert.match(html, /href="\/restaurants">Reset filters/);
@@ -91,7 +91,7 @@ test('restaurant detail pages render Markdown, summaries, metadata and links', (
     if (restaurant.body.includes('## At the table')) assert.match(detail, /<h2 id="at-the-table">At the table<\/h2>/);
     assert.doesNotMatch(detail, /Fictional sample restaurant|Example ·/);
     assert.match(detail, /href="\/restaurants">← All restaurants/);
-    assert.ok(detail.includes(`href="/restaurants/${restaurant.citySlug}"`));
+    assert.ok(detail.includes(`href="/restaurants/${citySlug(restaurant.city)}"`));
     for (const tag of restaurant.tags) assert.ok(detail.includes(`href="/restaurants/all/${tag}"`));
     for (const name of ['index', 'restaurants']) {
       const html = page(name);
@@ -105,7 +105,7 @@ test('restaurant detail pages render Markdown, summaries, metadata and links', (
 });
 
 test('retired content and its unused filters have no generated routes', () => {
-  assert.deepEqual(restaurants.map(r => r.id).sort(), ['bistro-lao', 'hawksmoor']);
+  for (const id of ['garden-table', 'little-plates']) assert.ok(!restaurants.some(r => r.id === id));
   for (const route of ['restaurants/place/garden-table', 'restaurants/place/little-plates', 'essays/a-place-to-keep-things', 'restaurants/london', 'restaurants/all/vegan', 'restaurants/all/vegetarian', 'restaurants/all/small-plates']) {
     assert.ok(!existsSync(`dist/${route}.html`), route);
   }

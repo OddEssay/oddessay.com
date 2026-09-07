@@ -17,7 +17,6 @@ summary: ${summary}
 image: ../../assets/restaurants/garden-table.png
 imageAlt: Fictional illustration used to test content discovery
 city: Test City
-citySlug: test-city
 tags: [new-authoring-tag]
 ---
 
@@ -29,14 +28,14 @@ Temporary content discovery test.
   try {
     await expect.poll(async () => (await request.get(`/restaurants/place/${slug}`)).text()).toContain('First saved summary');
     await expect.poll(async () => (await request.get('/restaurants')).text()).toContain(`/restaurants/place/${slug}`);
-    await expect.poll(async () => (await request.get('/restaurants/test-city/new-authoring-tag')).text()).toContain('New Authoring Tag');
+    await expect.poll(async () => (await request.get('/restaurants/test_city/new-authoring-tag')).text()).toContain('New Authoring Tag');
     await writeFile(file, source('Updated summary after saving Markdown'));
     await expect.poll(async () => (await request.get(`/restaurants/place/${slug}`)).text()).toContain('Updated summary after saving Markdown');
   } finally {
     await unlink(file);
   }
   await expect.poll(async () => (await request.get(`/restaurants/place/${slug}`)).status()).toBe(404);
-  await expect.poll(async () => (await request.get('/restaurants/test-city/new-authoring-tag')).status()).toBe(404);
+  await expect.poll(async () => (await request.get('/restaurants/test_city/new-authoring-tag')).status()).toBe(404);
 });
 
 test('existing essays and a temporary authored essay render without a demo field', async ({ request }) => {

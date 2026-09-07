@@ -7,7 +7,6 @@ imageAlt: "Generated pencil and charcoal illustration of roast beef, Yorkshire p
 originalImage: "../../assets/restaurants/hawksmoor/photo.png"
 originalImageAlt: "Original photo of roast beef, Yorkshire pudding, roast potatoes, carrots and cabbage at Hawksmoor."
 city: "Liverpool"
-citySlug: "liverpool"
 tags: ["sunday-dinner","cocktails","wine"]
 ---
 
