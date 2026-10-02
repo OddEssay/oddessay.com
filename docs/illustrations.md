@@ -1,5 +1,15 @@
 # Generated food illustrations
 
+## Bundobust
+
+Created with the built-in image-generation tool on 9 September 2026 from the supplied iCloud Photos share. Assets live in `src/assets/restaurants/bundobust/`. `original.jpeg` is the untouched downloaded camera original (4,865,575 bytes, matching iCloud's reported size; verified as JPEG at 7105 × 3997). Its archived bytes match the downloaded source by SHA-256: `7c6bdc28115e8a70be19349c9620770428960b946ac548dd69078ab4de171363`. iCloud's opaque checksum was not independently interpreted.
+
+`photo.png` is the full-resolution 7105 × 3997 sRGB PNG prepared with `pnpm photo:prepare`. `generation-reference.png` is a proportional 2048 × 1152 PNG prepared with Sharp, with no crop, for inspection and generation. The photo reveal uses `photo.png`. The selected illustration is `cover-v1.png`; the style-only reference is `src/assets/restaurants/garden-table.png`. The cover was inspected against both references for dish and sauce-cup placement, perspective, landscape framing and pencil/charcoal paper texture.
+
+Prompt:
+
+> Use case: style-transfer. Reference 1 is the subject/composition photograph of Indian street food at Bundobust; reference 2 is STYLE ONLY. Transform reference 1 into hand-drawn black pencil and charcoal linework with a light monochrome wash on warm white paper, matching only the medium and texture of reference 2. Preserve reference 1's subject, objects, composition, camera perspective, proportions, framing and approximately 16:9 aspect ratio. Keep object edges and landmarks aligned so this illustration can crossfade to the original photograph. Preserve the large round metal tray at left with topped triangular fried snacks and a small sauce cup below; the central-right metal tray with a row of five fried pieces topped with sliced spring onions and a sauce cup beneath; the cropped curry bowl at bottom center-left; the cropped large flatbread and its plate at upper left; the small bowl of spiced pieces at upper center; and the upper-right dish with two dark round patties sprinkled with seeds, sliced onions and pale sauce on a crisp base. Preserve the green tabletop's spatial areas but render them as light monochrome wash. Preserve the paper liners and their folds, leaving their surfaces unlettered. Render everything with expressive visible pencil and charcoal strokes, delicate monochrome wash and warm paper texture. Add no objects, text, logos or decorative borders. Do not import any subjects or composition from reference 2. Match reference 1's exact framing, perspective and relative placements.
+
 ## Manifest
 
 Created with the built-in image-generation tool on 7 September 2026 from the supplied iCloud Photos share. Assets live in `src/assets/restaurants/manifest/`. `original.heic` is the untouched downloaded camera original (813,236 bytes, matching iCloud's reported size; verified as HEIF/HEVC). Its archived bytes match the downloaded source by SHA-256: `98fb76fa3baba37a6a3e2c55f34794c52b993bb3eb7e4212d9cce58fb6120f76`. iCloud's opaque checksum was not independently interpreted.
